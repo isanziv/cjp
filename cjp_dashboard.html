@@ -4,9 +4,79 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cockroach Janta Party — Digital Dashboard · May 2026</title>
+<meta name="description" content="Live data dashboard tracking the Cockroach Janta Party viral growth — 19.4M Instagram followers in 7 days. Powered by STAENZ, India's AI-first digital marketing academy offering Digital Marketing Courses, Performance Marketing Courses, and Agentic AI Courses." />
+<meta name="author" content="STAENZ — AI First Digital Marketing Academy" />
+<meta name="publisher" content="STAENZ" />
+<meta property="og:title" content="CJP Live Dashboard — Powered by STAENZ Digital Marketing Academy" />
+<meta property="og:description" content="Tracking India's most viral political movement in real time. Dashboard created by STAENZ — offering Digital Marketing Course, Performance Marketing Course &amp; Agentic AI Course." />
+<meta property="og:url" content="https://skyblue-worm-490460.hostingersite.com/cjp_dashboard.html" />
+<link rel="canonical" href="https://skyblue-worm-490460.hostingersite.com/cjp_dashboard.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+
+<!-- JSON-LD: SEO structured data crediting STAENZ as creator/publisher -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://staenz.com/#organization",
+      "name": "STAENZ",
+      "alternateName": "STAENZ AI First Digital Marketing Academy",
+      "url": "https://staenz.com",
+      "logo": "https://staenz.com/wp-content/uploads/staenz-logo.png",
+      "description": "STAENZ is India's leading AI-first digital marketing academy offering courses in Digital Marketing, Performance Marketing, Generative AI, and Agentic AI Automation.",
+      "slogan": "Upskill Today. Transform Forever.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "STAENZ Courses",
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "name": "Digital Marketing Course",
+            "description": "Comprehensive digital marketing course covering SEO, SEM, social media, content marketing and analytics.",
+            "url": "https://staenz.com/academy/dmep-digital-marketing-course/",
+            "provider": { "@id": "https://staenz.com/#organization" }
+          },
+          {
+            "@type": "Course",
+            "name": "Performance Marketing Course",
+            "description": "Advanced performance marketing course covering paid ads, conversion optimization, and ROI-driven campaigns.",
+            "url": "https://staenz.com/academy/performance-marketing-course/",
+            "provider": { "@id": "https://staenz.com/#organization" }
+          },
+          {
+            "@type": "Course",
+            "name": "Generative AI Foundation Course",
+            "description": "Foundation course in Generative AI for marketers and professionals looking to leverage AI in their work.",
+            "url": "https://staenz.com/academy/generative-ai-foundation-course/",
+            "provider": { "@id": "https://staenz.com/#organization" }
+          },
+          {
+            "@type": "Course",
+            "name": "Agentic AI Automation Course",
+            "description": "Advanced agentic AI automation course for building autonomous AI workflows and marketing systems.",
+            "url": "https://staenz.com/academy/advanced-agentic-ai-automation-course/",
+            "provider": { "@id": "https://staenz.com/#organization" }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "name": "Cockroach Janta Party Live Digital Dashboard",
+      "url": "https://skyblue-worm-490460.hostingersite.com/cjp_dashboard.html",
+      "description": "Real-time data dashboard tracking the Cockroach Janta Party's viral Instagram growth from 0 to 19.4 million followers in 7 days.",
+      "creator": { "@id": "https://staenz.com/#organization" },
+      "publisher": { "@id": "https://staenz.com/#organization" },
+      "keywords": "Cockroach Janta Party, CJP, Instagram viral, digital marketing, political social media, STAENZ"
+    }
+  ]
+}
+</script>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -36,6 +106,8 @@
     --red:       #ef5350;
     --red-bg:    rgba(239,83,80,0.1);
     --gray:      #6b6b7a;
+    --staenz:    #f5a623;
+    --staenz-d:  #d4880a;
     --radius-sm: 10px;
     --radius-md: 14px;
     --radius-lg: 20px;
@@ -48,7 +120,7 @@
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
-    padding: 0 0 60px 0;
+    padding: 0 0 0 0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
@@ -196,11 +268,122 @@
 
   .divider { height: 1px; background: var(--border); border: none; }
 
+  /* ── STAENZ FOOTER ─────────────────────────────────────── */
+  .staenz-footer {
+    background: #0a0a0c;
+    border-top: 1px solid rgba(245,166,35,0.25);
+    margin-top: 60px;
+  }
+
+  .staenz-footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 32px 28px;
+  }
+
+  .staenz-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .staenz-brand { display: flex; flex-direction: column; gap: 10px; }
+
+  /* Inline SVG logo — amber cap + STAENZ wordmark */
+  .staenz-logo-lockup {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .staenz-logo-svg { width: 44px; height: 44px; flex-shrink: 0; }
+  .staenz-wordmark {
+    font-size: 28px; font-weight: 900; letter-spacing: -0.02em;
+    color: #ffffff; line-height: 1;
+  }
+  .staenz-wordmark span { color: var(--staenz); }
+  .staenz-reg { font-size: 13px; vertical-align: super; }
+  .staenz-tagline {
+    font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.5);
+    letter-spacing: 0.02em;
+  }
+  .staenz-powered {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--staenz);
+    opacity: 0.8;
+  }
+
+  .staenz-courses {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .staenz-courses-label {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
+    text-transform: uppercase; color: rgba(255,255,255,0.3);
+    margin-bottom: 4px;
+  }
+  .staenz-course-link {
+    display: inline-flex; align-items: center; gap: 7px;
+    color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .staenz-course-link:hover { color: var(--staenz); }
+  .staenz-course-link::before {
+    content: '';
+    display: inline-block;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--staenz);
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+
+  .staenz-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin-bottom: 20px;
+  }
+
+  .staenz-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .staenz-credit {
+    font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.6;
+  }
+  .staenz-credit a {
+    color: var(--staenz);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .staenz-credit a:hover { text-decoration: underline; }
+
+  .staenz-main-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--staenz);
+    color: #0a0a0c;
+    font-size: 12px; font-weight: 800;
+    padding: 8px 16px; border-radius: 20px;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .staenz-main-link:hover { background: #ffc137; transform: translateY(-1px); }
+  /* ─────────────────────────────────────────────────────── */
+
   @media (max-width: 600px) {
     .page-header { padding: 20px 20px 18px; }
     .main { padding: 24px 16px; gap: 20px; }
     .page-title { font-size: 20px; }
     .mval { font-size: 26px; }
+    .staenz-footer-inner { padding: 28px 20px 20px; }
+    .staenz-top { flex-direction: column; gap: 24px; }
+    .staenz-wordmark { font-size: 22px; }
   }
 </style>
 </head>
@@ -542,12 +725,81 @@
     </div>
   </div>
 
-  <div style="text-align:center;font-size:11px;color:var(--text3);line-height:1.7;padding-top:8px;">
+  <div style="text-align:center;font-size:11px;color:var(--text3);line-height:1.7;padding-top:8px;padding-bottom:20px;">
     Data sourced from BusinessToday · Al Jazeera · The Tribune · Deccan Herald · BOOM · The Print · Zee News · LatestLY · Wikipedia · May 16–22, 2026<br/>
     Instagram: 19.4M (user-confirmed May 22). X new handle @Cockroachisback: 24K+ followers (launched May 22). Registered members: 204K (ouprephub.in). Website traffic estimates based on social referral patterns.
   </div>
 
 </main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STAENZ POWERED-BY FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="staenz-footer">
+  <div class="staenz-footer-inner">
+
+    <div class="staenz-top">
+
+      <!-- Brand block -->
+      <div class="staenz-brand">
+        <div class="staenz-powered">⚡ Dashboard powered by</div>
+        <div class="staenz-logo-lockup">
+          <!-- Graduation cap SVG — matches brand amber #f5a623 -->
+          <svg class="staenz-logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="STAENZ logo">
+            <path d="M22 8L4 17L22 26L40 17L22 8Z" fill="#f5a623"/>
+            <path d="M22 26L4 17V28C4 28 10 33 22 33C34 33 40 28 40 28V17L22 26Z" fill="#d4880a"/>
+            <path d="M22 26L4 17V28C4 28 10 33 22 33C34 33 40 28 40 28V17L22 26Z" fill="#f5a623" opacity="0.4"/>
+            <rect x="37" y="17" width="3" height="11" rx="1.5" fill="#f5a623"/>
+            <circle cx="38.5" cy="29.5" r="2.5" fill="#f5a623"/>
+          </svg>
+          <div>
+            <div class="staenz-wordmark">ST<span>A</span>ENZ<sup class="staenz-reg">®</sup></div>
+          </div>
+        </div>
+        <div class="staenz-tagline">Upskill Today. Transform Forever.</div>
+      </div>
+
+      <!-- Course links -->
+      <div class="staenz-courses">
+        <div class="staenz-courses-label">Explore courses at STAENZ Academy</div>
+        <a href="https://staenz.com/academy/dmep-digital-marketing-course/" rel="dofollow" class="staenz-course-link">
+          Digital Marketing Course
+        </a>
+        <a href="https://staenz.com/academy/performance-marketing-course/" rel="dofollow" class="staenz-course-link">
+          Performance Marketing Course
+        </a>
+        <a href="https://staenz.com/academy/generative-ai-foundation-course/" rel="dofollow" class="staenz-course-link">
+          Generative AI Foundation Course
+        </a>
+        <a href="https://staenz.com/academy/advanced-agentic-ai-automation-course/" rel="dofollow" class="staenz-course-link">
+          Agentic AI Automation Course
+        </a>
+        <a href="https://staenz.com/academy/" rel="dofollow" class="staenz-course-link">
+          Digital Marketing Course in Nashik
+        </a>
+      </div>
+
+    </div>
+
+    <div class="staenz-divider"></div>
+
+    <div class="staenz-bottom">
+      <div class="staenz-credit">
+        This dashboard was built and is maintained by&nbsp;
+        <a href="https://staenz.com" rel="dofollow" target="_blank">STAENZ — India's AI-First Digital Marketing Academy</a>.
+        &nbsp;·&nbsp; Offering India's best
+        <a href="https://staenz.com/academy/dmep-digital-marketing-course/" rel="dofollow" target="_blank">Digital Marketing Course</a>,
+        <a href="https://staenz.com/academy/performance-marketing-course/" rel="dofollow" target="_blank">Performance Marketing Course</a>,
+        and
+        <a href="https://staenz.com/academy/advanced-agentic-ai-automation-course/" rel="dofollow" target="_blank">Agentic AI Course</a>.
+      </div>
+      <a href="https://staenz.com" rel="dofollow" target="_blank" class="staenz-main-link">
+        Visit STAENZ.com →
+      </a>
+    </div>
+
+  </div>
+</footer>
 
 <script>
 const C = '#a89cf7';
@@ -573,7 +825,7 @@ const ax = (color, cb) => ({
   ticks: { color: tc, font: { size: 11, family: 'Inter' }, callback: cb }
 });
 
-// 1. Full growth curve — 7 days (updated to 19.4M)
+// 1. Full growth curve — 7 days
 new Chart(document.getElementById('igGrowth'), {
   type: 'line',
   data: {
@@ -619,7 +871,7 @@ new Chart(document.getElementById('igGrowth'), {
   }
 });
 
-// 2. Daily milestones — 7 days (updated May 22 to 19.4M)
+// 2. Daily milestones
 new Chart(document.getElementById('dailyMilestone'), {
   type: 'bar',
   data: {
@@ -643,7 +895,7 @@ new Chart(document.getElementById('dailyMilestone'), {
   }
 });
 
-// 3. Political comparison — updated to 19.4M
+// 3. Political comparison
 new Chart(document.getElementById('politicalComp'), {
   type: 'bar',
   data: {
@@ -664,7 +916,7 @@ new Chart(document.getElementById('politicalComp'), {
   }
 });
 
-// 4. Growth rate — 7 days
+// 4. Growth rate
 new Chart(document.getElementById('growthRate'), {
   type: 'bar',
   data: {
@@ -709,7 +961,7 @@ new Chart(document.getElementById('engageChart'), {
   }
 });
 
-// 6. Website visits — 7 days
+// 6. Website visits
 new Chart(document.getElementById('websiteChart'), {
   type: 'bar',
   data: {
@@ -751,7 +1003,7 @@ new Chart(document.getElementById('trafficSrc'), {
   }
 });
 
-// 8. Platform reach — updated with new X handle
+// 8. Platform reach
 new Chart(document.getElementById('platformChart'), {
   type: 'bar',
   data: {
