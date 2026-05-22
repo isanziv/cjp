@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<!-- saved from url=(0234)file:///Users/sanjeevmishra/Library/Application%20Support/Claude/local-agent-mode-sessions/134d9657-7aca-421b-9c57-2dee00d6ab8f/4a05990e-d575-4a34-babc-479e71808a74/local_a30f1b68-0be7-43f2-8c3b-e35bbe3c867a/outputs/cjp_dashboard.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cockroach Janta Party — Digital Dashboard · May 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./CJP-Dashboard_files/css2" rel="stylesheet">
+<script src="./CJP-Dashboard_files/chart.umd.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #0d0d0f;
+    --bg2:       #141418;
+    --bg3:       #1c1c22;
+    --bg4:       #24242c;
+    --border:    rgba(255,255,255,0.08);
+    --border2:   rgba(255,255,255,0.13);
+    --text:      #f0f0f4;
+    --text2:     #9999aa;
+    --text3:     #666677;
+    --purple:    #a89cf7;
+    --purple-d:  #7c6fe0;
+    --purple-bg: rgba(168,156,247,0.1);
+    --coral:     #f07a5a;
+    --coral-bg:  rgba(240,122,90,0.1);
+    --green:     #3ecf8e;
+    --green-bg:  rgba(62,207,142,0.1);
+    --amber:     #f5a623;
+    --amber-bg:  rgba(245,166,35,0.1);
+    --blue:      #4da3f5;
+    --blue-bg:   rgba(77,163,245,0.1);
+    --pink:      #f06292;
+    --pink-bg:   rgba(240,98,146,0.1);
+    --red:       #ef5350;
+    --red-bg:    rgba(239,83,80,0.1);
+    --gray:      #6b6b7a;
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 0 0 60px 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER STRIP ── */
+  .page-header {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 40px 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+  }
+
+  .page-header-left { display: flex; align-items: center; gap: 16px; }
+
+  .avatar {
+    width: 54px; height: 54px; border-radius: 50%;
+    background: linear-gradient(135deg, #3a3060, #6a5acd);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; flex-shrink: 0;
+    border: 1.5px solid var(--purple-d);
+  }
+
+  .page-title { font-size: 26px; font-weight: 900; letter-spacing: -0.03em; color: var(--text); line-height: 1.1; }
+  .page-sub { font-size: 13px; color: var(--text2); margin-top: 5px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+  .live-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(62,207,142,0.12); color: var(--green);
+    font-size: 11px; font-weight: 700; padding: 4px 10px;
+    border-radius: 20px; border: 1px solid rgba(62,207,142,0.25);
+    letter-spacing: 0.04em;
+  }
+  .live-dot {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+    animation: pulse 1.4s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+  .badge {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 4px 10px; border-radius: 20px; letter-spacing: 0.03em;
+  }
+  .badge-purple { background: var(--purple-bg); color: var(--purple); border: 1px solid rgba(168,156,247,0.2); }
+  .badge-coral  { background: var(--coral-bg);  color: var(--coral);  border: 1px solid rgba(240,122,90,0.2); }
+  .badge-green  { background: var(--green-bg);  color: var(--green);  border: 1px solid rgba(62,207,142,0.2); }
+  .badge-amber  { background: var(--amber-bg);  color: var(--amber);  border: 1px solid rgba(245,166,35,0.2); }
+  .badge-blue   { background: var(--blue-bg);   color: var(--blue);   border: 1px solid rgba(77,163,245,0.2); }
+  .badge-red    { background: var(--red-bg);    color: var(--red);    border: 1px solid rgba(239,83,80,0.2); }
+  .badge-gray   { background: rgba(107,107,122,0.15); color: var(--gray); border: 1px solid rgba(107,107,122,0.25); }
+
+  /* ── LAYOUT ── */
+  .main { max-width: 1100px; margin: 0 auto; padding: 36px 32px; display: flex; flex-direction: column; gap: 28px; }
+
+  /* ── ALERT BANNERS ── */
+  .alert {
+    border-radius: var(--radius-md); padding: 16px 20px;
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .alert-red   { background: rgba(239,83,80,0.08);  border: 1px solid rgba(239,83,80,0.25); }
+  .alert-purple{ background: rgba(168,156,247,0.08); border: 1px solid rgba(168,156,247,0.25); }
+  .alert-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+  .alert-title { font-size: 15px; font-weight: 800; margin-bottom: 4px; letter-spacing: -0.01em; }
+  .alert-body  { font-size: 13px; font-weight: 500; line-height: 1.65; }
+
+  /* ── SECTION LABEL ── */
+  .sec-label {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--text3); margin-bottom: 14px;
+  }
+
+  /* ── METRIC CARDS ── */
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+
+  .mcard {
+    background: var(--bg3); border-radius: var(--radius-md);
+    border: 1px solid var(--border); padding: 20px 20px 16px;
+    position: relative; overflow: hidden;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .mcard:hover { border-color: var(--border2); transform: translateY(-2px); }
+
+  .mcard-glow {
+    position: absolute; top: -20px; right: -20px;
+    width: 80px; height: 80px; border-radius: 50%; opacity: 0.15;
+    pointer-events: none;
+  }
+  .mlabel { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
+  .mval   { font-size: 34px; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+  .msub   { font-size: 12px; font-weight: 500; color: var(--text2); margin-top: 6px; display: flex; align-items: center; gap: 5px; }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 24px 28px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--border2); }
+
+  .card-title { font-size: 17px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; display: flex; align-items: center; gap: 9px; }
+  .card-title-icon { font-size: 20px; }
+  .card-sub   { font-size: 12px; font-weight: 500; color: var(--text2); margin-top: 4px; margin-bottom: 18px; }
+
+  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+
+  /* ── CHART HELPERS ── */
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--text2); }
+  .legend-sq { width: 10px; height: 10px; border-radius: 3px; display: inline-block; flex-shrink: 0; }
+
+  .chart-wrap { position: relative; width: 100%; }
+
+  /* ── TIMELINE ── */
+  .timeline { display: flex; flex-direction: column; }
+  .tl-row {
+    display: flex; gap: 16px; padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .tl-row:last-child { border-bottom: none; }
+  .tl-date { min-width: 68px; font-size: 11px; font-weight: 800; color: var(--text3); padding-top: 2px; letter-spacing: 0.03em; flex-shrink: 0; }
+  .tl-dot  { width: 10px; min-width: 10px; height: 10px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
+  .tl-title{ font-size: 14px; font-weight: 700; color: var(--text); }
+  .tl-body { font-size: 12px; font-weight: 500; color: var(--text2); margin-top: 3px; line-height: 1.55; }
+
+  /* ── MEDIA / BRAND LISTS ── */
+  .media-group-label { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
+  .media-item { font-size: 13px; font-weight: 500; color: var(--text); display: flex; align-items: center; gap: 9px; margin-bottom: 5px; }
+  .media-dot  { width: 6px; height: 6px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+
+  .brand-block {
+    background: var(--bg3); border-radius: var(--radius-sm);
+    padding: 14px 18px; margin-bottom: 10px; border-left: 4px solid;
+  }
+  .brand-block-label { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 5px; }
+  .brand-block-val   { font-size: 15px; font-weight: 700; color: var(--text); }
+
+  /* ── FOOTER STRIP ── */
+  .foot-note {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 16px 20px;
+    border-left: 4px solid var(--border2);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+  .foot-note-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 9px; }
+  .foot-note-body  { font-size: 13px; font-weight: 500; color: var(--text2); line-height: 1.65; }
+
+  .divider { height: 1px; background: var(--border); border: none; }
+
+  @media (max-width: 600px) {
+    .page-header { padding: 20px 20px 18px; }
+    .main { padding: 24px 16px; gap: 20px; }
+    .page-title { font-size: 20px; }
+    .mval { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ STICKY HEADER ═══════════════════════════ -->
+<header class="page-header">
+  <div class="page-header-left">
+    <div class="avatar">🪳</div>
+    <div>
+      <div class="page-title">Cockroach Janta Party</div>
+      <div class="page-sub">
+        <span class="live-pill"><span class="live-dot"></span>Live · May 21, 2026 · Day 6</span>
+        <span class="badge badge-purple">@cockroachjantaparty</span>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center;">
+    <span class="badge badge-coral">Political satire</span>
+    <span class="badge badge-green">Viral</span>
+    <span class="badge badge-amber">India · Gen Z</span>
+  </div>
+</header>
+
+<!-- ═══════════════════════════ MAIN CONTENT ═══════════════════════════ -->
+<main class="main">
+
+  <!-- ALERT: X withheld -->
+  <div class="alert alert-red">
+    <div class="alert-icon" style="color:var(--red);">⚠</div>
+    <div>
+      <div class="alert-title" style="color:var(--red);">Breaking — X/Twitter account withheld in India (May 21)</div>
+      <div class="alert-body" style="color:#f09090;">X withheld @cockroachjantaparty under a legal/government demand. 100K+ followers before withholding. Account may still be visible outside India. Founder responded: <em>"Why are they so scared of us?"</em></div>
+    </div>
+  </div>
+
+  <!-- MILESTONE BANNER: BJP surpassed -->
+  <div class="alert alert-purple">
+    <div class="alert-icon" style="color:var(--purple);">🏆</div>
+    <div>
+      <div class="alert-title" style="color:var(--purple);">Surpassed BJP on Instagram — in just 4 days</div>
+      <div class="alert-body" style="color:#c0b8f8;">
+        CJP <span style="font-size:20px;font-weight:900;color:var(--purple);">~13M</span>
+        &nbsp;·&nbsp; BJP <strong style="font-weight:700;">8.7M</strong>
+        &nbsp;·&nbsp; INC <strong style="font-weight:700;">13.2M</strong>
+        <span style="font-size:11px;opacity:0.7;">(CJP nearly equal — closing fast)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── KPI GRID ── -->
+  <div>
+    <div class="sec-label">📊 Live metrics — May 21, 2026</div>
+    <div class="kpi-grid">
+      <div class="mcard">
+        <div class="mcard-glow" style="background:var(--purple);"></div>
+        <div class="mlabel">Instagram</div>
+        <div class="mval" style="color:var(--purple);">~13M</div>
+        <div class="msub"><span class="live-dot"></span>Day 6 · still growing</div>
+      </div>
+      <div class="mcard">
+        <div class="mcard-glow" style="background:var(--coral);"></div>
+        <div class="mlabel">Days to 13M</div>
+        <div class="mval" style="color:var(--coral);">6</div>
+        <div class="msub">Since May 16 launch</div>
+      </div>
+      <div class="mcard">
+        <div class="mcard-glow" style="background:var(--gray);"></div>
+        <div class="mlabel">X / Twitter</div>
+        <div class="mval" style="color:var(--gray);">100K+</div>
+        <div class="msub" style="color:var(--red);font-weight:700;">⚠ Withheld in India</div>
+      </div>
+      <div class="mcard">
+        <div class="mcard-glow" style="background:var(--green);"></div>
+        <div class="mlabel">Sign-ups</div>
+        <div class="mval" style="color:var(--green);">3.5L+</div>
+        <div class="msub">Google Form members</div>
+      </div>
+      <div class="mcard">
+        <div class="mcard-glow" style="background:var(--purple-d);"></div>
+        <div class="mlabel">Posts</div>
+        <div class="mval" style="color:var(--purple);">56+</div>
+        <div class="msub">~10 posts per day</div>
+      </div>
+      <div class="mcard">
+        <div class="mcard-glow" style="background:var(--blue);"></div>
+        <div class="mlabel">CJP App</div>
+        <div class="mval" style="color:var(--blue);">795K</div>
+        <div class="msub">cjpapp.online users</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FULL GROWTH CURVE ── -->
+  <div class="card">
+    <div class="card-title"><span class="card-title-icon">📈</span>Instagram follower growth — 6-day surge</div>
+    <div class="card-sub">Hour-by-hour from zero to 13 million · dashed line = BJP baseline (8.7M)</div>
+    <div class="legend">
+      <div class="legend-item"><span class="legend-sq" style="background:#a89cf7;"></span>CJP followers</div>
+      <div class="legend-item"><span class="legend-sq" style="background:#ef5350;border:1px dashed #ef5350;"></span>BJP 8.7M baseline</div>
+    </div>
+    <div class="chart-wrap" style="height:280px;">
+      <canvas id="igGrowth" role="img" aria-label="Line chart CJP growth 0 to 13M over 6 days" width="1956" height="560" style="display: block; box-sizing: border-box; height: 280px; width: 978px;"></canvas>
+    </div>
+  </div>
+
+  <!-- ── DAILY MILESTONES + POLITICAL COMPARISON ── -->
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title"><span class="card-title-icon">📅</span>Daily milestones</div>
+      <div class="card-sub">End-of-day follower count (millions)</div>
+      <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--coral);"></span>Followers (M)</div></div>
+      <div class="chart-wrap" style="height:220px;">
+        <canvas id="dailyMilestone" role="img" aria-label="Daily follower milestone bar chart" width="902" height="440" style="display: block; box-sizing: border-box; height: 220px; width: 451px;"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="card-title-icon">🏛️</span>Political Instagram ranking</div>
+      <div class="card-sub">CJP vs. major Indian parties (followers in M)</div>
+      <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--purple);"></span>Followers</div></div>
+      <div class="chart-wrap" style="height:220px;">
+        <canvas id="politicalComp" role="img" aria-label="Political party Instagram comparison" width="902" height="440" style="display: block; box-sizing: border-box; height: 220px; width: 451px;"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── GROWTH RATE + ENGAGEMENT ── -->
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title"><span class="card-title-icon">🚀</span>Daily new followers</div>
+      <div class="card-sub">Followers gained per day — peak was May 20 at +4.8M</div>
+      <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--coral);"></span>New followers/day (M)</div></div>
+      <div class="chart-wrap" style="height:220px;">
+        <canvas id="growthRate" role="img" aria-label="Daily new followers bar chart" width="902" height="440" style="display: block; box-sizing: border-box; height: 220px; width: 451px;"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="card-title-icon">❤️</span>Engagement vs. industry</div>
+      <div class="card-sub">CJP estimated 20%+ vs. standard benchmarks</div>
+      <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--pink);"></span>Engagement rate %</div></div>
+      <div class="chart-wrap" style="height:220px;">
+        <canvas id="engageChart" role="img" aria-label="Engagement rate comparison" width="902" height="440" style="display: block; box-sizing: border-box; height: 220px; width: 451px;"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WEBSITE TRAFFIC ── -->
+  <div class="card">
+    <div class="card-title"><span class="card-title-icon">🌐</span>Website traffic — cockroachjantaparty.org</div>
+    <div class="card-sub">Domain is 5 days old · no prior history · all traffic spike-driven</div>
+    <div class="two-col" style="gap:24px;">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:10px;">Est. daily visits (K)</div>
+        <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--green);"></span>Visits (K)</div></div>
+        <div class="chart-wrap" style="height:200px;">
+          <canvas id="websiteChart" role="img" aria-label="Daily website visits bar chart" width="954" height="400" style="display: block; box-sizing: border-box; height: 200px; width: 477px;"></canvas>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:10px;">Traffic sources</div>
+        <div class="legend" style="margin-bottom:10px;">
+          <div class="legend-item"><span class="legend-sq" style="background:var(--purple);"></span>Social 55%</div>
+          <div class="legend-item"><span class="legend-sq" style="background:var(--green);"></span>Direct 22%</div>
+          <div class="legend-item"><span class="legend-sq" style="background:var(--amber);"></span>Referral 17%</div>
+          <div class="legend-item"><span class="legend-sq" style="background:var(--blue);"></span>Organic 6%</div>
+        </div>
+        <div class="chart-wrap" style="height:200px;">
+          <canvas id="trafficSrc" role="img" aria-label="Traffic source doughnut chart" width="954" height="400" style="display: block; box-sizing: border-box; height: 200px; width: 477px;"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PLATFORM REACH ── -->
+  <div class="card">
+    <div class="card-title"><span class="card-title-icon">📱</span>Full platform reach</div>
+    <div class="card-sub">All channels combined — May 21, 2026</div>
+    <div class="legend">
+      <div class="legend-item"><span class="legend-sq" style="background:var(--purple);"></span>Instagram</div>
+      <div class="legend-item"><span class="legend-sq" style="background:var(--blue);"></span>CJP App</div>
+      <div class="legend-item"><span class="legend-sq" style="background:var(--green);"></span>Website</div>
+      <div class="legend-item"><span class="legend-sq" style="background:var(--coral);"></span>Sign-ups</div>
+      <div class="legend-item"><span class="legend-sq" style="background:var(--gray);"></span>X (withheld)</div>
+    </div>
+    <div class="chart-wrap" style="height:240px;">
+      <canvas id="platformChart" role="img" aria-label="Platform reach horizontal bar chart" width="1956" height="480" style="display: block; box-sizing: border-box; height: 240px; width: 978px;"></canvas>
+    </div>
+  </div>
+
+  <!-- ── TIMELINE ── -->
+  <div class="card">
+    <div class="card-title" style="margin-bottom:20px;"><span class="card-title-icon">🕐</span>Milestone timeline — full 6-day story</div>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-date">May 15</div>
+        <div class="tl-dot" style="background:var(--red);"></div>
+        <div><div class="tl-title">CJI "cockroach" remark fires nationwide</div><div class="tl-body">Supreme Court hearing · Chief Justice Surya Kant compares unemployed youth to parasites of society</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">May 16</div>
+        <div class="tl-dot" style="background:var(--purple);"></div>
+        <div><div class="tl-title">CJP launches · 0 → 80K in hours</div><div class="tl-body">Instagram + X accounts live · cockroachjantaparty.org deployed · party anthem released · site built with Claude + ChatGPT</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">May 17–18</div>
+        <div class="tl-dot" style="background:var(--amber);"></div>
+        <div><div class="tl-title">551K → 2M · #MainBhiCockroach trends nationally</div><div class="tl-body">BusinessToday · BOOM · Deccan Herald · The Week begin coverage · mock manifesto posts surge</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">May 19</div>
+        <div class="tl-dot" style="background:var(--green);"></div>
+        <div><div class="tl-title">3M followers · TMC MPs Mahua Moitra &amp; Kirti Azad join</div><div class="tl-body">350K+ Google Form sign-ups · Wikipedia page created · cjpapp.online launches · 8 clone domains registered</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">May 20</div>
+        <div class="tl-dot" style="background:var(--purple);"></div>
+        <div><div class="tl-title">6.1M → 10.9M · Surpasses BJP (8.7M) · Al Jazeera goes global</div><div class="tl-body">Peak growth day +4.8M · Yamuna cockroach cleanup drive viral · founder raises hacking concerns</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">May 21 🔴</div>
+        <div class="tl-dot" style="background:var(--red);"></div>
+        <div><div class="tl-title">~13M Instagram · X withheld in India · INC within reach</div><div class="tl-body">Legal demand silences X account · founder: "Why are they scared?" · INC has 13.2M — gap closing fast</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MEDIA + BRAND ── -->
+  <div class="two-col">
+
+    <div class="card">
+      <div class="card-title" style="margin-bottom:18px;"><span class="card-title-icon">📰</span>Media coverage · 30+ outlets</div>
+
+      <div style="margin-bottom:14px;">
+        <div class="media-group-label">International</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--coral);"></span>Al Jazeera · IBTimes · Business Upturn</div>
+      </div>
+
+      <hr class="divider" style="margin-bottom:14px;">
+
+      <div style="margin-bottom:14px;">
+        <div class="media-group-label">Mainstream India</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--green);"></span>BusinessToday · The Print · The Week</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--green);"></span>Deccan Herald · Tribune · BOOM · Brut</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--green);"></span>Zee News · Republic World · Sunday Guardian</div>
+      </div>
+
+      <hr class="divider" style="margin-bottom:14px;">
+
+      <div>
+        <div class="media-group-label">Critical / Political</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--amber);"></span>OpIndia (English + Gujarati + Hindi)</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--amber);"></span>NewsX · Siasat Daily · Deccan Chronicle</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="margin-bottom:18px;"><span class="card-title-icon">🧬</span>Brand DNA</div>
+
+      <div class="brand-block" style="border-left-color:var(--purple);">
+        <div class="brand-block-label">Tagline</div>
+        <div class="brand-block-val">"Voice of the Lazy &amp; Unemployed"</div>
+      </div>
+      <div class="brand-block" style="border-left-color:var(--pink);">
+        <div class="brand-block-label">Viral slogan</div>
+        <div class="brand-block-val">"Main Bhi Cockroach"</div>
+      </div>
+      <div class="brand-block" style="border-left-color:var(--green);">
+        <div class="brand-block-label">Identity</div>
+        <div class="brand-block-val">"Secular, Socialist, Democratic, Lazy"</div>
+      </div>
+      <div class="brand-block" style="border-left-color:var(--amber); margin-bottom:0;">
+        <div class="brand-block-label">Notable joins</div>
+        <div class="brand-block-val">Mahua Moitra · Kirti Azad (TMC) · Akhilesh Yadav (SP)</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── FOUNDER PROFILE ── -->
+  <div class="card">
+    <div class="card-title" style="margin-bottom:18px;"><span class="card-title-icon">👤</span>Founder — Abhijeet Dipke</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;">
+      <div>
+        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Age &amp; origin</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);">30 · Pune, Maharashtra</div>
+      </div>
+      <div>
+        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Education</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);">Journalism UG (Pune) · PR Master's, Boston University</div>
+      </div>
+      <div>
+        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">AAP tenure</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);">Oct 2019 – May 2024 (~4.5 years)</div>
+      </div>
+      <div>
+        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Key roles</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);">CMO Fellow · Social media under Ankit Lal · Education Dept Advisor</div>
+      </div>
+      <div>
+        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Expertise</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);">Meme-first political digital strategy (2020 Delhi elections)</div>
+      </div>
+      <div>
+        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">CJP stance</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);">"Not an AAP plant · No party alignment · Youth-led satire"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER NOTICES ── -->
+  <div class="two-col">
+    <div class="foot-note">
+      <div class="foot-note-title"><span style="font-size:20px;">▶</span>YouTube — no official channel yet</div>
+      <div class="foot-note-body">All YouTube content is third-party coverage (Al Jazeera, Brut, BOOM, Zee News). With 13M Instagram followers and global press, a YouTube launch would be explosive — it remains the single biggest gap in CJP's content strategy.</div>
+    </div>
+    <div class="foot-note">
+      <div class="foot-note-title"><span style="font-size:20px;">🌐</span>8 domains registered in 6 days</div>
+      <div class="foot-note-body"><strong>Official:</strong> cockroachjantaparty.org · cjpapp.online &nbsp; <strong>Clones/fan:</strong> .buzz · .online · .site · .app · cockroachjanata.org · cockroachjantapartyorg.com</div>
+    </div>
+  </div>
+
+  <!-- DATA NOTE -->
+  <div style="text-align:center;font-size:11px;color:var(--text3);line-height:1.7;padding-top:8px;">
+    Data sourced from BusinessToday · Al Jazeera · The Tribune · Sunday Guardian Live · Deccan Herald · BOOM Live · Wikipedia · May 16–21, 2026<br>
+    Website traffic figures are estimates. Instagram follower data confirmed at ~12.9M (BusinessToday May 21); user-reported ~13M.
+  </div>
+
+</main>
+
+<!-- ═══════════════════════════ CHARTS ═══════════════════════════ -->
+<script>
+const C = '#a89cf7';   // purple
+const O = '#f07a5a';   // coral
+const G = '#3ecf8e';   // green
+const A = '#f5a623';   // amber
+const B = '#4da3f5';   // blue
+const P = '#f06292';   // pink
+const R = '#ef5350';   // red
+const X = '#6b6b7a';   // gray
+
+const tc = 'rgba(255,255,255,0.35)';
+const gc = 'rgba(255,255,255,0.05)';
+
+const base = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: { legend: { display: false } }
+};
+
+const ax = (color, cb) => ({
+  grid: { color: gc },
+  ticks: { color: tc, font: { size: 11, family: 'Inter' }, callback: cb }
+});
+
+// 1. Full growth curve
+new Chart(document.getElementById('igGrowth'), {
+  type: 'line',
+  data: {
+    labels: ['D1 0h','6h','12h','18h','D2','30h','36h','D3','42h','48h','D4','60h','66h','D5','84h','96h','D6','120h'],
+    datasets: [
+      {
+        label: 'CJP (M)',
+        data: [0,0.02,0.08,0.25,0.55,0.9,1.3,2.0,2.4,3.0,4.5,6.1,8.2,9.5,10.9,11.8,12.4,13.0],
+        borderColor: C,
+        backgroundColor: 'rgba(168,156,247,0.08)',
+        borderWidth: 2.5, fill: true, tension: 0.42,
+        pointBackgroundColor: C,
+        pointRadius: [3,2,2,2,4,2,2,4,2,4,4,4,4,5,4,4,4,7],
+        pointHoverRadius: 7
+      },
+      {
+        label: 'BJP 8.7M',
+        data: Array(18).fill(8.7),
+        borderColor: R, backgroundColor: 'transparent',
+        borderWidth: 1.5, borderDash: [5,4], fill: false, tension: 0, pointRadius: 0
+      }
+    ]
+  },
+  options: {
+    ...base,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ctx.datasetIndex === 0 ? ctx.parsed.y.toFixed(1)+'M followers' : 'BJP baseline: 8.7M' } }
+    },
+    scales: {
+      x: { ...ax(tc), ticks: { color: tc, font: { size: 10, family:'Inter' }, maxRotation: 0, autoSkip: true, maxTicksLimit: 9 } },
+      y: { ...ax(tc, v => v.toFixed(0)+'M'), min: 0, max: 14.5 }
+    }
+  }
+});
+
+// 2. Daily milestones
+new Chart(document.getElementById('dailyMilestone'), {
+  type: 'bar',
+  data: {
+    labels: ['May 16','May 17','May 18','May 19','May 20','May 21'],
+    datasets: [{
+      data: [0.55,2.0,3.0,6.1,10.9,13.0],
+      backgroundColor: ['rgba(240,122,90,0.3)','rgba(240,122,90,0.45)','rgba(240,122,90,0.6)','rgba(240,122,90,0.75)','rgba(240,122,90,0.9)','rgba(240,122,90,1)'],
+      borderColor: O, borderWidth: 1, borderRadius: 6
+    }]
+  },
+  options: {
+    ...base,
+    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.y.toFixed(2)+'M followers' } } },
+    scales: {
+      x: ax(tc),
+      y: { ...ax(tc, v => v+'M'), min: 0, max: 15 }
+    }
+  }
+});
+
+// 3. Political comparison
+new Chart(document.getElementById('politicalComp'), {
+  type: 'bar',
+  data: {
+    labels: ['INC','CJP (live)','BJP','AAP','SP'],
+    datasets: [{
+      data: [13.2,13.0,8.7,4.2,2.1],
+      backgroundColor: ['rgba(77,163,245,0.65)','rgba(168,156,247,1)','rgba(62,207,142,0.65)','rgba(245,166,35,0.65)','rgba(240,98,146,0.65)'],
+      borderColor: [B,C,G,A,P], borderWidth: 1, borderRadius: 6
+    }]
+  },
+  options: {
+    ...base, indexAxis: 'y',
+    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.x.toFixed(1)+'M followers' } } },
+    scales: {
+      x: { ...ax(tc, v => v+'M'), min: 0, max: 15 },
+      y: ax(tc)
+    }
+  }
+});
+
+// 4. Growth rate
+new Chart(document.getElementById('growthRate'), {
+  type: 'bar',
+  data: {
+    labels: ['May 16','May 17','May 18','May 19','May 20','May 21'],
+    datasets: [{
+      data: [0.55,1.45,1.0,3.1,4.8,2.1],
+      backgroundColor: ['rgba(240,122,90,0.28)','rgba(240,122,90,0.42)','rgba(240,122,90,0.38)','rgba(240,122,90,0.68)','rgba(240,122,90,1)','rgba(240,122,90,0.58)'],
+      borderColor: O, borderWidth: 1, borderRadius: 6
+    }]
+  },
+  options: {
+    ...base,
+    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => '+'+ctx.parsed.y.toFixed(2)+'M new followers' } } },
+    scales: {
+      x: ax(tc),
+      y: { ...ax(tc, v => '+'+v.toFixed(1)+'M'), min: 0, max: 5.5 }
+    }
+  }
+});
+
+// 5. Engagement
+new Chart(document.getElementById('engageChart'), {
+  type: 'bar',
+  data: {
+    labels: ['CJP (est.)','Mid-tier\n100K–1M','Large\n1M–5M','Mega\n5M+'],
+    datasets: [{
+      data: [20,3.5,2.4,1.7],
+      backgroundColor: ['rgba(240,98,146,1)','rgba(240,98,146,0.4)','rgba(240,98,146,0.3)','rgba(240,98,146,0.22)'],
+      borderColor: P, borderWidth: 1, borderRadius: 6
+    }]
+  },
+  options: {
+    ...base, indexAxis: 'y',
+    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.x.toFixed(1)+'% engagement' } } },
+    scales: {
+      x: { ...ax(tc, v => v+'%'), min: 0, max: 25 },
+      y: ax(tc)
+    }
+  }
+});
+
+// 6. Website visits
+new Chart(document.getElementById('websiteChart'), {
+  type: 'bar',
+  data: {
+    labels: ['May 16','May 17','May 18','May 19','May 20','May 21'],
+    datasets: [{
+      data: [50,120,200,280,350,220],
+      backgroundColor: ['rgba(62,207,142,0.3)','rgba(62,207,142,0.45)','rgba(62,207,142,0.6)','rgba(62,207,142,0.78)','rgba(62,207,142,1)','rgba(62,207,142,0.58)'],
+      borderColor: G, borderWidth: 1, borderRadius: 6
+    }]
+  },
+  options: {
+    ...base,
+    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => Math.round(ctx.parsed.y)+'K visits' } } },
+    scales: {
+      x: ax(tc),
+      y: { ...ax(tc, v => v+'K'), min: 0, max: 400 }
+    }
+  }
+});
+
+// 7. Traffic sources doughnut
+new Chart(document.getElementById('trafficSrc'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Social (IG/X)','Direct','Referral (news)','Organic search'],
+    datasets: [{
+      data: [55,22,17,6],
+      backgroundColor: [C,G,A,B],
+      borderWidth: 3,
+      borderColor: '#141418'
+    }]
+  },
+  options: {
+    ...base,
+    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.label+': '+ctx.parsed+'%' } } },
+    cutout: '62%'
+  }
+});
+
+// 8. Platform reach
+new Chart(document.getElementById('platformChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Instagram','CJP App\ncjpapp.online','Est. website\nvisits total','Form\nsign-ups','X / Twitter\n(withheld)'],
+    datasets: [{
+      data: [13000,795,1220,350,100],
+      backgroundColor: ['rgba(168,156,247,0.9)','rgba(77,163,245,0.75)','rgba(62,207,142,0.75)','rgba(240,122,90,0.75)','rgba(107,107,122,0.5)'],
+      borderColor: [C,B,G,O,X], borderWidth: 1, borderRadius: 6
+    }]
+  },
+  options: {
+    ...base, indexAxis: 'y',
+    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.x >= 1000 ? (ctx.parsed.x/1000).toFixed(1)+'M' : Math.round(ctx.parsed.x)+'K' } } },
+    scales: {
+      x: { ...ax(tc, v => v >= 1000 ? (v/1000).toFixed(0)+'M' : v+'K') },
+      y: ax(tc)
+    }
+  }
+});
+</script>
+
+
+
+</body></html>
