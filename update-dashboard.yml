@@ -1,0 +1,30 @@
+name: Daily CJP Dashboard Update
+
+on:
+  schedule:
+    - cron: '30 2 * * *'   # 8:00 AM IST = 02:30 UTC
+  workflow_dispatch:         # lets you trigger it manually too
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Download latest dashboard from Cowork export URL
+        run: |
+          curl -fsSL "${{ secrets.DASHBOARD_URL }}" -o cjp_dashboard.html
+          echo "Downloaded successfully"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "CJP Bot"
+          git config user.email "bot@cjp-dashboard"
+          git add cjp_dashboard.html
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore: daily dashboard update $(date +'%Y-%m-%d')"
+          git push
