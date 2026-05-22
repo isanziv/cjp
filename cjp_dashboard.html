@@ -53,7 +53,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── HEADER STRIP ── */
   .page-header {
     background: var(--bg2);
     border-bottom: 1px solid var(--border);
@@ -107,27 +106,24 @@
   .badge-red    { background: var(--red-bg);    color: var(--red);    border: 1px solid rgba(239,83,80,0.2); }
   .badge-gray   { background: rgba(107,107,122,0.15); color: var(--gray); border: 1px solid rgba(107,107,122,0.25); }
 
-  /* ── LAYOUT ── */
   .main { max-width: 1100px; margin: 0 auto; padding: 36px 32px; display: flex; flex-direction: column; gap: 28px; }
 
-  /* ── ALERT BANNERS ── */
   .alert {
     border-radius: var(--radius-md); padding: 16px 20px;
     display: flex; align-items: flex-start; gap: 14px;
   }
-  .alert-red   { background: rgba(239,83,80,0.08);  border: 1px solid rgba(239,83,80,0.25); }
-  .alert-purple{ background: rgba(168,156,247,0.08); border: 1px solid rgba(168,156,247,0.25); }
+  .alert-red    { background: rgba(239,83,80,0.08);  border: 1px solid rgba(239,83,80,0.25); }
+  .alert-purple { background: rgba(168,156,247,0.08); border: 1px solid rgba(168,156,247,0.25); }
+  .alert-green  { background: rgba(62,207,142,0.08);  border: 1px solid rgba(62,207,142,0.25); }
   .alert-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
   .alert-title { font-size: 15px; font-weight: 800; margin-bottom: 4px; letter-spacing: -0.01em; }
   .alert-body  { font-size: 13px; font-weight: 500; line-height: 1.65; }
 
-  /* ── SECTION LABEL ── */
   .sec-label {
     font-size: 10px; font-weight: 800; letter-spacing: 0.14em;
     text-transform: uppercase; color: var(--text3); margin-bottom: 14px;
   }
 
-  /* ── METRIC CARDS ── */
   .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
 
   .mcard {
@@ -147,7 +143,6 @@
   .mval   { font-size: 34px; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
   .msub   { font-size: 12px; font-weight: 500; color: var(--text2); margin-top: 6px; display: flex; align-items: center; gap: 5px; }
 
-  /* ── CARDS ── */
   .card {
     background: var(--bg2); border: 1px solid var(--border);
     border-radius: var(--radius-lg); padding: 24px 28px;
@@ -161,14 +156,12 @@
 
   .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
 
-  /* ── CHART HELPERS ── */
   .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--text2); }
   .legend-sq { width: 10px; height: 10px; border-radius: 3px; display: inline-block; flex-shrink: 0; }
 
   .chart-wrap { position: relative; width: 100%; }
 
-  /* ── TIMELINE ── */
   .timeline { display: flex; flex-direction: column; }
   .tl-row {
     display: flex; gap: 16px; padding: 13px 0;
@@ -180,7 +173,6 @@
   .tl-title{ font-size: 14px; font-weight: 700; color: var(--text); }
   .tl-body { font-size: 12px; font-weight: 500; color: var(--text2); margin-top: 3px; line-height: 1.55; }
 
-  /* ── MEDIA / BRAND LISTS ── */
   .media-group-label { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
   .media-item { font-size: 13px; font-weight: 500; color: var(--text); display: flex; align-items: center; gap: 9px; margin-bottom: 5px; }
   .media-dot  { width: 6px; height: 6px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
@@ -192,10 +184,9 @@
   .brand-block-label { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 5px; }
   .brand-block-val   { font-size: 15px; font-weight: 700; color: var(--text); }
 
-  /* ── FOOTER STRIP ── */
   .foot-note {
     background: var(--bg2); border: 1px solid var(--border);
-    border-radius: var(--radius-md); padding: 16px 20px;
+    padding: 16px 20px;
     border-left: 4px solid var(--border2);
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
   }
@@ -214,14 +205,13 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════ STICKY HEADER ═══════════════════════════ -->
 <header class="page-header">
   <div class="page-header-left">
     <div class="avatar">🪳</div>
     <div>
       <div class="page-title">Cockroach Janta Party</div>
       <div class="page-sub">
-        <span class="live-pill"><span class="live-dot"></span>Live · May 21, 2026 · Day 6</span>
+        <span class="live-pill"><span class="live-dot"></span>Live · May 22, 2026 · Day 7</span>
         <span class="badge badge-purple">@cockroachjantaparty</span>
       </div>
     </div>
@@ -233,46 +223,54 @@
   </div>
 </header>
 
-<!-- ═══════════════════════════ MAIN CONTENT ═══════════════════════════ -->
 <main class="main">
 
-  <!-- ALERT: X withheld -->
-  <div class="alert alert-red">
-    <div class="alert-icon" style="color:var(--red);">⚠</div>
+  <!-- NEW: Bankipur election alert -->
+  <div class="alert alert-green">
+    <div class="alert-icon" style="color:var(--green);">🗳️</div>
     <div>
-      <div class="alert-title" style="color:var(--red);">Breaking — X/Twitter account withheld in India (May 21)</div>
-      <div class="alert-body" style="color:#f09090;">X withheld @cockroachjantaparty under a legal/government demand. 100K+ followers before withholding. Account may still be visible outside India. Founder responded: <em>"Why are they so scared of us?"</em></div>
+      <div class="alert-title" style="color:var(--green);">Breaking — CJP eyes first real election: Bankipur, Bihar</div>
+      <div class="alert-body" style="color:#a0f0c8;">Supporters are actively considering fielding a candidate in the upcoming Bankipur Assembly constituency by-election in Bihar — a direct contest against BJP and Jan Suraaj Party. Party is not yet registered with the Election Commission of India.</div>
     </div>
   </div>
 
-  <!-- MILESTONE BANNER: BJP surpassed -->
+  <!-- X withheld alert -->
+  <div class="alert alert-red">
+    <div class="alert-icon" style="color:var(--red);">⚠</div>
+    <div>
+      <div class="alert-title" style="color:var(--red);">X/Twitter account withheld in India (May 21)</div>
+      <div class="alert-body" style="color:#f09090;">X withheld @cockroachjantaparty under a legal/government demand. 100K+ followers before withholding. Founder responded: <em>"Why are they scared of us?"</em></div>
+    </div>
+  </div>
+
+  <!-- Milestone banner -->
   <div class="alert alert-purple">
     <div class="alert-icon" style="color:var(--purple);">🏆</div>
     <div>
-      <div class="alert-title" style="color:var(--purple);">Surpassed BJP on Instagram — in just 4 days</div>
+      <div class="alert-title" style="color:var(--purple);">19.3M — Now India's #1 most-followed Instagram account</div>
       <div class="alert-body" style="color:#c0b8f8;">
-        CJP <span style="font-size:20px;font-weight:900;color:var(--purple);">~13M</span>
-        &nbsp;·&nbsp; BJP <strong style="font-weight:700;">8.7M</strong>
+        CJP <span style="font-size:20px;font-weight:900;color:var(--purple);">19.3M</span>
         &nbsp;·&nbsp; INC <strong style="font-weight:700;">13.2M</strong>
-        <span style="font-size:11px;opacity:0.7;">(CJP nearly equal — closing fast)</span>
+        &nbsp;·&nbsp; BJP <strong style="font-weight:700;">8.7M</strong>
+        <span style="font-size:11px;opacity:0.7;">(CJP leads all Indian political accounts by 6M+)</span>
       </div>
     </div>
   </div>
 
-  <!-- ── KPI GRID ── -->
+  <!-- KPI GRID -->
   <div>
-    <div class="sec-label">📊 Live metrics — May 21, 2026</div>
+    <div class="sec-label">📊 Live metrics — May 22, 2026</div>
     <div class="kpi-grid">
       <div class="mcard">
         <div class="mcard-glow" style="background:var(--purple);"></div>
         <div class="mlabel">Instagram</div>
-        <div class="mval" style="color:var(--purple);">~13M</div>
-        <div class="msub"><span class="live-dot"></span>Day 6 · still growing</div>
+        <div class="mval" style="color:var(--purple);">19.3M</div>
+        <div class="msub"><span class="live-dot"></span>Day 7 · still growing</div>
       </div>
       <div class="mcard">
         <div class="mcard-glow" style="background:var(--coral);"></div>
-        <div class="mlabel">Days to 13M</div>
-        <div class="mval" style="color:var(--coral);">6</div>
+        <div class="mlabel">Days to 19M</div>
+        <div class="mval" style="color:var(--coral);">7</div>
         <div class="msub">Since May 16 launch</div>
       </div>
       <div class="mcard">
@@ -283,15 +281,15 @@
       </div>
       <div class="mcard">
         <div class="mcard-glow" style="background:var(--green);"></div>
-        <div class="mlabel">Sign-ups</div>
-        <div class="mval" style="color:var(--green);">3.5L+</div>
-        <div class="msub">Google Form members</div>
+        <div class="mlabel">Registered</div>
+        <div class="mval" style="color:var(--green);">204K+</div>
+        <div class="msub">Verified cockroaches</div>
       </div>
       <div class="mcard">
         <div class="mcard-glow" style="background:var(--purple-d);"></div>
-        <div class="mlabel">Posts</div>
-        <div class="mval" style="color:var(--purple);">56+</div>
-        <div class="msub">~10 posts per day</div>
+        <div class="mlabel">Sign-ups</div>
+        <div class="mval" style="color:var(--purple);">3.5L+</div>
+        <div class="msub">Google Form members</div>
       </div>
       <div class="mcard">
         <div class="mcard-glow" style="background:var(--blue);"></div>
@@ -302,47 +300,48 @@
     </div>
   </div>
 
-  <!-- ── FULL GROWTH CURVE ── -->
+  <!-- FULL GROWTH CURVE -->
   <div class="card">
-    <div class="card-title"><span class="card-title-icon">📈</span>Instagram follower growth — 6-day surge</div>
-    <div class="card-sub">Hour-by-hour from zero to 13 million · dashed line = BJP baseline (8.7M)</div>
+    <div class="card-title"><span class="card-title-icon">📈</span>Instagram follower growth — 7-day surge</div>
+    <div class="card-sub">From zero to 19.3 million · dashed lines = BJP (8.7M) and INC (13.2M) baselines</div>
     <div class="legend">
       <div class="legend-item"><span class="legend-sq" style="background:#a89cf7;"></span>CJP followers</div>
-      <div class="legend-item"><span class="legend-sq" style="background:#ef5350;border:1px dashed #ef5350;"></span>BJP 8.7M baseline</div>
+      <div class="legend-item"><span class="legend-sq" style="background:#ef5350;"></span>BJP 8.7M</div>
+      <div class="legend-item"><span class="legend-sq" style="background:#4da3f5;"></span>INC 13.2M</div>
     </div>
-    <div class="chart-wrap" style="height:280px;">
-      <canvas id="igGrowth" role="img" aria-label="Line chart CJP growth 0 to 13M over 6 days"></canvas>
+    <div class="chart-wrap" style="height:300px;">
+      <canvas id="igGrowth"></canvas>
     </div>
   </div>
 
-  <!-- ── DAILY MILESTONES + POLITICAL COMPARISON ── -->
+  <!-- DAILY MILESTONES + POLITICAL COMPARISON -->
   <div class="two-col">
     <div class="card">
       <div class="card-title"><span class="card-title-icon">📅</span>Daily milestones</div>
       <div class="card-sub">End-of-day follower count (millions)</div>
       <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--coral);"></span>Followers (M)</div></div>
-      <div class="chart-wrap" style="height:220px;">
-        <canvas id="dailyMilestone" role="img" aria-label="Daily follower milestone bar chart"></canvas>
+      <div class="chart-wrap" style="height:240px;">
+        <canvas id="dailyMilestone"></canvas>
       </div>
     </div>
     <div class="card">
       <div class="card-title"><span class="card-title-icon">🏛️</span>Political Instagram ranking</div>
-      <div class="card-sub">CJP vs. major Indian parties (followers in M)</div>
+      <div class="card-sub">CJP now leads all Indian political parties</div>
       <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--purple);"></span>Followers</div></div>
-      <div class="chart-wrap" style="height:220px;">
-        <canvas id="politicalComp" role="img" aria-label="Political party Instagram comparison"></canvas>
+      <div class="chart-wrap" style="height:240px;">
+        <canvas id="politicalComp"></canvas>
       </div>
     </div>
   </div>
 
-  <!-- ── GROWTH RATE + ENGAGEMENT ── -->
+  <!-- GROWTH RATE + ENGAGEMENT -->
   <div class="two-col">
     <div class="card">
       <div class="card-title"><span class="card-title-icon">🚀</span>Daily new followers</div>
       <div class="card-sub">Followers gained per day — peak was May 20 at +4.8M</div>
       <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--coral);"></span>New followers/day (M)</div></div>
       <div class="chart-wrap" style="height:220px;">
-        <canvas id="growthRate" role="img" aria-label="Daily new followers bar chart"></canvas>
+        <canvas id="growthRate"></canvas>
       </div>
     </div>
     <div class="card">
@@ -350,21 +349,21 @@
       <div class="card-sub">CJP estimated 20%+ vs. standard benchmarks</div>
       <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--pink);"></span>Engagement rate %</div></div>
       <div class="chart-wrap" style="height:220px;">
-        <canvas id="engageChart" role="img" aria-label="Engagement rate comparison"></canvas>
+        <canvas id="engageChart"></canvas>
       </div>
     </div>
   </div>
 
-  <!-- ── WEBSITE TRAFFIC ── -->
+  <!-- WEBSITE TRAFFIC -->
   <div class="card">
     <div class="card-title"><span class="card-title-icon">🌐</span>Website traffic — cockroachjantaparty.org</div>
-    <div class="card-sub">Domain is 5 days old · no prior history · all traffic spike-driven</div>
+    <div class="card-sub">Domain launched May 16 · all traffic spike-driven from Instagram</div>
     <div class="two-col" style="gap:24px;">
       <div>
         <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:10px;">Est. daily visits (K)</div>
         <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--green);"></span>Visits (K)</div></div>
         <div class="chart-wrap" style="height:200px;">
-          <canvas id="websiteChart" role="img" aria-label="Daily website visits bar chart"></canvas>
+          <canvas id="websiteChart"></canvas>
         </div>
       </div>
       <div>
@@ -376,16 +375,16 @@
           <div class="legend-item"><span class="legend-sq" style="background:var(--blue);"></span>Organic 6%</div>
         </div>
         <div class="chart-wrap" style="height:200px;">
-          <canvas id="trafficSrc" role="img" aria-label="Traffic source doughnut chart"></canvas>
+          <canvas id="trafficSrc"></canvas>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ── PLATFORM REACH ── -->
+  <!-- PLATFORM REACH -->
   <div class="card">
     <div class="card-title"><span class="card-title-icon">📱</span>Full platform reach</div>
-    <div class="card-sub">All channels combined — May 21, 2026</div>
+    <div class="card-sub">All channels combined — May 22, 2026</div>
     <div class="legend">
       <div class="legend-item"><span class="legend-sq" style="background:var(--purple);"></span>Instagram</div>
       <div class="legend-item"><span class="legend-sq" style="background:var(--blue);"></span>CJP App</div>
@@ -394,13 +393,13 @@
       <div class="legend-item"><span class="legend-sq" style="background:var(--gray);"></span>X (withheld)</div>
     </div>
     <div class="chart-wrap" style="height:240px;">
-      <canvas id="platformChart" role="img" aria-label="Platform reach horizontal bar chart"></canvas>
+      <canvas id="platformChart"></canvas>
     </div>
   </div>
 
-  <!-- ── TIMELINE ── -->
+  <!-- TIMELINE -->
   <div class="card">
-    <div class="card-title" style="margin-bottom:20px;"><span class="card-title-icon">🕐</span>Milestone timeline — full 6-day story</div>
+    <div class="card-title" style="margin-bottom:20px;"><span class="card-title-icon">🕐</span>Milestone timeline — full 7-day story</div>
     <div class="timeline">
       <div class="tl-row">
         <div class="tl-date">May 15</div>
@@ -425,38 +424,37 @@
       <div class="tl-row">
         <div class="tl-date">May 20</div>
         <div class="tl-dot" style="background:var(--purple);"></div>
-        <div><div class="tl-title">6.1M → 10.9M · Surpasses BJP (8.7M) · Al Jazeera goes global</div><div class="tl-body">Peak growth day +4.8M · Yamuna cockroach cleanup drive viral · founder raises hacking concerns</div></div>
+        <div><div class="tl-title">6.1M → 10.9M · Surpasses BJP (8.7M) · Al Jazeera goes global</div><div class="tl-body">Peak growth day +4.8M · Yamuna cockroach cleanup drive viral · founder raises hacking concerns · Dalit caste attacks on X begin</div></div>
       </div>
       <div class="tl-row">
-        <div class="tl-date">May 21 🔴</div>
+        <div class="tl-date">May 21</div>
         <div class="tl-dot" style="background:var(--red);"></div>
-        <div><div class="tl-title">~13M Instagram · X withheld in India · INC within reach</div><div class="tl-body">Legal demand silences X account · founder: "Why are they scared?" · INC has 13.2M — gap closing fast</div></div>
+        <div><div class="tl-title">~13M → 16M+ · X withheld in India · INC surpassed</div><div class="tl-body">Legal demand silences X account · founder: "Why are they scared?" · crosses INC (13.2M) · becomes #1 political account</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">May 22 🔴</div>
+        <div class="tl-dot" style="background:var(--green);"></div>
+        <div><div class="tl-title">19.3M Instagram · Bankipur election plans announced · 204K registered</div><div class="tl-body">Supporters eye first real election — Bankipur Assembly by-election in Bihar · 204K verified cockroaches · CJP leads all Indian political parties on Instagram by 6M+</div></div>
       </div>
     </div>
   </div>
 
-  <!-- ── MEDIA + BRAND ── -->
+  <!-- MEDIA + BRAND -->
   <div class="two-col">
-
     <div class="card">
       <div class="card-title" style="margin-bottom:18px;"><span class="card-title-icon">📰</span>Media coverage · 30+ outlets</div>
-
       <div style="margin-bottom:14px;">
         <div class="media-group-label">International</div>
-        <div class="media-item"><span class="media-dot" style="background:var(--coral);"></span>Al Jazeera · IBTimes · Business Upturn</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--coral);"></span>Al Jazeera · IBTimes · Business Upturn · Nepal News</div>
       </div>
-
       <hr class="divider" style="margin-bottom:14px;" />
-
       <div style="margin-bottom:14px;">
         <div class="media-group-label">Mainstream India</div>
-        <div class="media-item"><span class="media-dot" style="background:var(--green);"></span>BusinessToday · The Print · The Week</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--green);"></span>BusinessToday · The Print · The Week · WION</div>
         <div class="media-item"><span class="media-dot" style="background:var(--green);"></span>Deccan Herald · Tribune · BOOM · Brut</div>
-        <div class="media-item"><span class="media-dot" style="background:var(--green);"></span>Zee News · Republic World · Sunday Guardian</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--green);"></span>Zee News · Republic World · Sunday Guardian · Siasat</div>
       </div>
-
       <hr class="divider" style="margin-bottom:14px;" />
-
       <div>
         <div class="media-group-label">Critical / Political</div>
         <div class="media-item"><span class="media-dot" style="background:var(--amber);"></span>OpIndia (English + Gujarati + Hindi)</div>
@@ -466,7 +464,6 @@
 
     <div class="card">
       <div class="card-title" style="margin-bottom:18px;"><span class="card-title-icon">🧬</span>Brand DNA</div>
-
       <div class="brand-block" style="border-left-color:var(--purple);">
         <div class="brand-block-label">Tagline</div>
         <div class="brand-block-val">"Voice of the Lazy &amp; Unemployed"</div>
@@ -484,16 +481,15 @@
         <div class="brand-block-val">Mahua Moitra · Kirti Azad (TMC) · Akhilesh Yadav (SP)</div>
       </div>
     </div>
-
   </div>
 
-  <!-- ── FOUNDER PROFILE ── -->
+  <!-- FOUNDER PROFILE -->
   <div class="card">
     <div class="card-title" style="margin-bottom:18px;"><span class="card-title-icon">👤</span>Founder — Abhijeet Dipke</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;">
       <div>
         <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Age &amp; origin</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);">30 · Pune, Maharashtra</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);">30 · Pune, Maharashtra · Dalit</div>
       </div>
       <div>
         <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Education</div>
@@ -512,42 +508,40 @@
         <div style="font-size:14px;font-weight:600;color:var(--text);">Meme-first political digital strategy (2020 Delhi elections)</div>
       </div>
       <div>
-        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">CJP stance</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);">"Not an AAP plant · No party alignment · Youth-led satire"</div>
+        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Under attack</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);">Facing caste-based attacks on X after Dalit identity revealed (The Print, May 2026)</div>
       </div>
     </div>
   </div>
 
-  <!-- ── FOOTER NOTICES ── -->
+  <!-- FOOTER NOTICES -->
   <div class="two-col">
     <div class="foot-note">
       <div class="foot-note-title"><span style="font-size:20px;">▶</span>YouTube — no official channel yet</div>
-      <div class="foot-note-body">All YouTube content is third-party coverage (Al Jazeera, Brut, BOOM, Zee News). With 13M Instagram followers and global press, a YouTube launch would be explosive — it remains the single biggest gap in CJP's content strategy.</div>
+      <div class="foot-note-body">All YouTube content is third-party coverage (Al Jazeera, Brut, BOOM, Zee News). With 19.3M Instagram followers and global press, a YouTube launch would be explosive — the single biggest gap in CJP's content strategy.</div>
     </div>
     <div class="foot-note">
-      <div class="foot-note-title"><span style="font-size:20px;">🌐</span>8 domains registered in 6 days</div>
-      <div class="foot-note-body"><strong>Official:</strong> cockroachjantaparty.org · cjpapp.online &nbsp; <strong>Clones/fan:</strong> .buzz · .online · .site · .app · cockroachjanata.org · cockroachjantapartyorg.com</div>
+      <div class="foot-note-title"><span style="font-size:20px;">🗳️</span>Election Commission status</div>
+      <div class="foot-note-body">CJP is <strong>not yet registered</strong> as a political party with the Election Commission of India. The Bankipur candidacy would require independent filing. Registration process expected to be initiated soon.</div>
     </div>
   </div>
 
-  <!-- DATA NOTE -->
   <div style="text-align:center;font-size:11px;color:var(--text3);line-height:1.7;padding-top:8px;">
-    Data sourced from BusinessToday · Al Jazeera · The Tribune · Sunday Guardian Live · Deccan Herald · BOOM Live · Wikipedia · May 16–21, 2026<br/>
-    Website traffic figures are estimates. Instagram follower data confirmed at ~12.9M (BusinessToday May 21); user-reported ~13M.
+    Data sourced from BusinessToday · Al Jazeera · The Tribune · Deccan Herald · BOOM · The Print · Wikipedia · May 16–22, 2026<br/>
+    Instagram: 19.3M (user-confirmed May 22). Registered members: 204K (ouprephub.in). Website traffic estimates based on social referral patterns.
   </div>
 
 </main>
 
-<!-- ═══════════════════════════ CHARTS ═══════════════════════════ -->
 <script>
-const C = '#a89cf7';   // purple
-const O = '#f07a5a';   // coral
-const G = '#3ecf8e';   // green
-const A = '#f5a623';   // amber
-const B = '#4da3f5';   // blue
-const P = '#f06292';   // pink
-const R = '#ef5350';   // red
-const X = '#6b6b7a';   // gray
+const C = '#a89cf7';
+const O = '#f07a5a';
+const G = '#3ecf8e';
+const A = '#f5a623';
+const B = '#4da3f5';
+const P = '#f06292';
+const R = '#ef5350';
+const X = '#6b6b7a';
 
 const tc = 'rgba(255,255,255,0.35)';
 const gc = 'rgba(255,255,255,0.05)';
@@ -563,26 +557,31 @@ const ax = (color, cb) => ({
   ticks: { color: tc, font: { size: 11, family: 'Inter' }, callback: cb }
 });
 
-// 1. Full growth curve
+// 1. Full growth curve — 7 days
 new Chart(document.getElementById('igGrowth'), {
   type: 'line',
   data: {
-    labels: ['D1 0h','6h','12h','18h','D2','30h','36h','D3','42h','48h','D4','60h','66h','D5','84h','96h','D6','120h'],
+    labels: ['D1','6h','12h','18h','D2','30h','36h','D3','48h','D4','60h','D5','84h','96h','D6','108h','D7'],
     datasets: [
       {
         label: 'CJP (M)',
-        data: [0,0.02,0.08,0.25,0.55,0.9,1.3,2.0,2.4,3.0,4.5,6.1,8.2,9.5,10.9,11.8,12.4,13.0],
-        borderColor: C,
-        backgroundColor: 'rgba(168,156,247,0.08)',
+        data: [0,0.02,0.08,0.25,0.55,0.9,1.3,2.0,3.0,6.1,8.2,10.9,13.0,16.0,17.2,18.4,19.3],
+        borderColor: C, backgroundColor: 'rgba(168,156,247,0.08)',
         borderWidth: 2.5, fill: true, tension: 0.42,
         pointBackgroundColor: C,
-        pointRadius: [3,2,2,2,4,2,2,4,2,4,4,4,4,5,4,4,4,7],
+        pointRadius: [3,2,2,2,4,2,2,4,4,5,4,5,5,5,4,4,7],
         pointHoverRadius: 7
       },
       {
         label: 'BJP 8.7M',
-        data: Array(18).fill(8.7),
+        data: Array(17).fill(8.7),
         borderColor: R, backgroundColor: 'transparent',
+        borderWidth: 1.5, borderDash: [5,4], fill: false, tension: 0, pointRadius: 0
+      },
+      {
+        label: 'INC 13.2M',
+        data: Array(17).fill(13.2),
+        borderColor: B, backgroundColor: 'transparent',
         borderWidth: 1.5, borderDash: [5,4], fill: false, tension: 0, pointRadius: 0
       }
     ]
@@ -591,23 +590,30 @@ new Chart(document.getElementById('igGrowth'), {
     ...base,
     plugins: {
       legend: { display: false },
-      tooltip: { callbacks: { label: ctx => ctx.datasetIndex === 0 ? ctx.parsed.y.toFixed(1)+'M followers' : 'BJP baseline: 8.7M' } }
+      tooltip: { callbacks: { label: ctx => {
+        if(ctx.datasetIndex===0) return ctx.parsed.y.toFixed(1)+'M followers';
+        if(ctx.datasetIndex===1) return 'BJP baseline: 8.7M';
+        return 'INC baseline: 13.2M';
+      }}}
     },
     scales: {
       x: { ...ax(tc), ticks: { color: tc, font: { size: 10, family:'Inter' }, maxRotation: 0, autoSkip: true, maxTicksLimit: 9 } },
-      y: { ...ax(tc, v => v.toFixed(0)+'M'), min: 0, max: 14.5 }
+      y: { ...ax(tc, v => v.toFixed(0)+'M'), min: 0, max: 21 }
     }
   }
 });
 
-// 2. Daily milestones
+// 2. Daily milestones — 7 days
 new Chart(document.getElementById('dailyMilestone'), {
   type: 'bar',
   data: {
-    labels: ['May 16','May 17','May 18','May 19','May 20','May 21'],
+    labels: ['May 16','May 17','May 18','May 19','May 20','May 21','May 22'],
     datasets: [{
-      data: [0.55,2.0,3.0,6.1,10.9,13.0],
-      backgroundColor: ['rgba(240,122,90,0.3)','rgba(240,122,90,0.45)','rgba(240,122,90,0.6)','rgba(240,122,90,0.75)','rgba(240,122,90,0.9)','rgba(240,122,90,1)'],
+      data: [0.55,2.0,3.0,6.1,10.9,16.0,19.3],
+      backgroundColor: [
+        'rgba(240,122,90,0.25)','rgba(240,122,90,0.38)','rgba(240,122,90,0.5)',
+        'rgba(240,122,90,0.63)','rgba(240,122,90,0.78)','rgba(240,122,90,0.9)','rgba(240,122,90,1)'
+      ],
       borderColor: O, borderWidth: 1, borderRadius: 6
     }]
   },
@@ -616,40 +622,43 @@ new Chart(document.getElementById('dailyMilestone'), {
     plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.y.toFixed(2)+'M followers' } } },
     scales: {
       x: ax(tc),
-      y: { ...ax(tc, v => v+'M'), min: 0, max: 15 }
+      y: { ...ax(tc, v => v+'M'), min: 0, max: 22 }
     }
   }
 });
 
-// 3. Political comparison
+// 3. Political comparison — updated
 new Chart(document.getElementById('politicalComp'), {
   type: 'bar',
   data: {
-    labels: ['INC','CJP (live)','BJP','AAP','SP'],
+    labels: ['CJP (live)','INC','BJP','AAP','SP'],
     datasets: [{
-      data: [13.2,13.0,8.7,4.2,2.1],
-      backgroundColor: ['rgba(77,163,245,0.65)','rgba(168,156,247,1)','rgba(62,207,142,0.65)','rgba(245,166,35,0.65)','rgba(240,98,146,0.65)'],
-      borderColor: [B,C,G,A,P], borderWidth: 1, borderRadius: 6
+      data: [19.3,13.2,8.7,4.2,2.1],
+      backgroundColor: ['rgba(168,156,247,1)','rgba(77,163,245,0.65)','rgba(62,207,142,0.65)','rgba(245,166,35,0.65)','rgba(240,98,146,0.65)'],
+      borderColor: [C,B,G,A,P], borderWidth: 1, borderRadius: 6
     }]
   },
   options: {
     ...base, indexAxis: 'y',
     plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.x.toFixed(1)+'M followers' } } },
     scales: {
-      x: { ...ax(tc, v => v+'M'), min: 0, max: 15 },
+      x: { ...ax(tc, v => v+'M'), min: 0, max: 22 },
       y: ax(tc)
     }
   }
 });
 
-// 4. Growth rate
+// 4. Growth rate — 7 days
 new Chart(document.getElementById('growthRate'), {
   type: 'bar',
   data: {
-    labels: ['May 16','May 17','May 18','May 19','May 20','May 21'],
+    labels: ['May 16','May 17','May 18','May 19','May 20','May 21','May 22'],
     datasets: [{
-      data: [0.55,1.45,1.0,3.1,4.8,2.1],
-      backgroundColor: ['rgba(240,122,90,0.28)','rgba(240,122,90,0.42)','rgba(240,122,90,0.38)','rgba(240,122,90,0.68)','rgba(240,122,90,1)','rgba(240,122,90,0.58)'],
+      data: [0.55,1.45,1.0,3.1,4.8,5.1,3.3],
+      backgroundColor: [
+        'rgba(240,122,90,0.25)','rgba(240,122,90,0.38)','rgba(240,122,90,0.35)',
+        'rgba(240,122,90,0.6)','rgba(240,122,90,0.9)','rgba(240,122,90,1)','rgba(240,122,90,0.7)'
+      ],
       borderColor: O, borderWidth: 1, borderRadius: 6
     }]
   },
@@ -658,7 +667,7 @@ new Chart(document.getElementById('growthRate'), {
     plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => '+'+ctx.parsed.y.toFixed(2)+'M new followers' } } },
     scales: {
       x: ax(tc),
-      y: { ...ax(tc, v => '+'+v.toFixed(1)+'M'), min: 0, max: 5.5 }
+      y: { ...ax(tc, v => '+'+v.toFixed(1)+'M'), min: 0, max: 6.5 }
     }
   }
 });
@@ -684,14 +693,17 @@ new Chart(document.getElementById('engageChart'), {
   }
 });
 
-// 6. Website visits
+// 6. Website visits — 7 days
 new Chart(document.getElementById('websiteChart'), {
   type: 'bar',
   data: {
-    labels: ['May 16','May 17','May 18','May 19','May 20','May 21'],
+    labels: ['May 16','May 17','May 18','May 19','May 20','May 21','May 22'],
     datasets: [{
-      data: [50,120,200,280,350,220],
-      backgroundColor: ['rgba(62,207,142,0.3)','rgba(62,207,142,0.45)','rgba(62,207,142,0.6)','rgba(62,207,142,0.78)','rgba(62,207,142,1)','rgba(62,207,142,0.58)'],
+      data: [50,120,200,280,350,220,310],
+      backgroundColor: [
+        'rgba(62,207,142,0.25)','rgba(62,207,142,0.38)','rgba(62,207,142,0.52)',
+        'rgba(62,207,142,0.65)','rgba(62,207,142,0.85)','rgba(62,207,142,0.55)','rgba(62,207,142,0.78)'
+      ],
       borderColor: G, borderWidth: 1, borderRadius: 6
     }]
   },
@@ -705,7 +717,7 @@ new Chart(document.getElementById('websiteChart'), {
   }
 });
 
-// 7. Traffic sources doughnut
+// 7. Traffic sources
 new Chart(document.getElementById('trafficSrc'), {
   type: 'doughnut',
   data: {
@@ -713,8 +725,7 @@ new Chart(document.getElementById('trafficSrc'), {
     datasets: [{
       data: [55,22,17,6],
       backgroundColor: [C,G,A,B],
-      borderWidth: 3,
-      borderColor: '#141418'
+      borderWidth: 3, borderColor: '#141418'
     }]
   },
   options: {
@@ -724,15 +735,15 @@ new Chart(document.getElementById('trafficSrc'), {
   }
 });
 
-// 8. Platform reach
+// 8. Platform reach — updated
 new Chart(document.getElementById('platformChart'), {
   type: 'bar',
   data: {
-    labels: ['Instagram','CJP App\ncjpapp.online','Est. website\nvisits total','Form\nsign-ups','X / Twitter\n(withheld)'],
+    labels: ['Instagram','CJP App\ncjpapp.online','Est. website\nvisits total','Form\nsign-ups','Registered\nmembers','X / Twitter\n(withheld)'],
     datasets: [{
-      data: [13000,795,1220,350,100],
-      backgroundColor: ['rgba(168,156,247,0.9)','rgba(77,163,245,0.75)','rgba(62,207,142,0.75)','rgba(240,122,90,0.75)','rgba(107,107,122,0.5)'],
-      borderColor: [C,B,G,O,X], borderWidth: 1, borderRadius: 6
+      data: [19300,795,1530,350,204,100],
+      backgroundColor: ['rgba(168,156,247,0.9)','rgba(77,163,245,0.75)','rgba(62,207,142,0.75)','rgba(240,122,90,0.75)','rgba(245,166,35,0.75)','rgba(107,107,122,0.5)'],
+      borderColor: [C,B,G,O,A,X], borderWidth: 1, borderRadius: 6
     }]
   },
   options: {
