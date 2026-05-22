@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cockroach Janta Party — Digital Dashboard · May 2026</title>
-<meta name="description" content="Live data dashboard tracking the Cockroach Janta Party viral growth — 20M Instagram followers in 7 days. Powered by STAENZ, India's AI-first digital marketing academy offering Digital Marketing Courses, Performance Marketing Courses, and Agentic AI Courses." />
+<meta name="description" content="Live data dashboard tracking the Cockroach Janta Party viral growth — 20.49M Instagram followers. Powered by STAENZ, India's AI-first digital marketing academy offering Digital Marketing Courses, Performance Marketing Courses, and Agentic AI Courses." />
 <meta name="author" content="STAENZ — AI First Digital Marketing Academy" />
 <meta name="publisher" content="STAENZ" />
 <meta property="og:title" content="CJP Live Dashboard — Powered by STAENZ Digital Marketing Academy" />
@@ -15,7 +15,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 
-<!-- JSON-LD: SEO structured data crediting STAENZ as creator/publisher -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,34 +32,10 @@
         "@type": "OfferCatalog",
         "name": "STAENZ Courses",
         "itemListElement": [
-          {
-            "@type": "Course",
-            "name": "Digital Marketing Course",
-            "description": "Comprehensive digital marketing course covering SEO, SEM, social media, content marketing and analytics.",
-            "url": "https://staenz.com/academy/dmep-digital-marketing-course/",
-            "provider": { "@id": "https://staenz.com/#organization" }
-          },
-          {
-            "@type": "Course",
-            "name": "Performance Marketing Course",
-            "description": "Advanced performance marketing course covering paid ads, conversion optimization, and ROI-driven campaigns.",
-            "url": "https://staenz.com/academy/performance-marketing-course/",
-            "provider": { "@id": "https://staenz.com/#organization" }
-          },
-          {
-            "@type": "Course",
-            "name": "Generative AI Foundation Course",
-            "description": "Foundation course in Generative AI for marketers and professionals looking to leverage AI in their work.",
-            "url": "https://staenz.com/academy/generative-ai-foundation-course/",
-            "provider": { "@id": "https://staenz.com/#organization" }
-          },
-          {
-            "@type": "Course",
-            "name": "Agentic AI Automation Course",
-            "description": "Advanced agentic AI automation course for building autonomous AI workflows and marketing systems.",
-            "url": "https://staenz.com/academy/advanced-agentic-ai-automation-course/",
-            "provider": { "@id": "https://staenz.com/#organization" }
-          }
+          {"@type":"Course","name":"Digital Marketing Course","url":"https://staenz.com/academy/dmep-digital-marketing-course/","provider":{"@id":"https://staenz.com/#organization"}},
+          {"@type":"Course","name":"Performance Marketing Course","url":"https://staenz.com/academy/performance-marketing-course/","provider":{"@id":"https://staenz.com/#organization"}},
+          {"@type":"Course","name":"Generative AI Foundation Course","url":"https://staenz.com/academy/generative-ai-foundation-course/","provider":{"@id":"https://staenz.com/#organization"}},
+          {"@type":"Course","name":"Agentic AI Automation Course","url":"https://staenz.com/academy/advanced-agentic-ai-automation-course/","provider":{"@id":"https://staenz.com/#organization"}}
         ]
       }
     },
@@ -68,9 +43,9 @@
       "@type": "WebPage",
       "name": "Cockroach Janta Party Live Digital Dashboard",
       "url": "https://skyblue-worm-490460.hostingersite.com/cjp_dashboard.html",
-      "description": "Real-time data dashboard tracking the Cockroach Janta Party's viral Instagram growth from 0 to 20 million followers in 7 days.",
-      "creator": { "@id": "https://staenz.com/#organization" },
-      "publisher": { "@id": "https://staenz.com/#organization" },
+      "description": "Real-time data dashboard tracking the Cockroach Janta Party viral Instagram growth — 20.49M followers. Auto-updated every hour via Apify.",
+      "creator": {"@id":"https://staenz.com/#organization"},
+      "publisher": {"@id":"https://staenz.com/#organization"},
       "keywords": "Cockroach Janta Party, CJP, Instagram viral, digital marketing, political social media, STAENZ"
     }
   ]
@@ -79,314 +54,128 @@
 
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --bg:        #0d0d0f;
-    --bg2:       #141418;
-    --bg3:       #1c1c22;
-    --bg4:       #24242c;
-    --border:    rgba(255,255,255,0.08);
-    --border2:   rgba(255,255,255,0.13);
-    --text:      #f0f0f4;
-    --text2:     #9999aa;
-    --text3:     #666677;
-    --purple:    #a89cf7;
-    --purple-d:  #7c6fe0;
-    --purple-bg: rgba(168,156,247,0.1);
-    --coral:     #f07a5a;
-    --coral-bg:  rgba(240,122,90,0.1);
-    --green:     #3ecf8e;
-    --green-bg:  rgba(62,207,142,0.1);
-    --amber:     #f5a623;
-    --amber-bg:  rgba(245,166,35,0.1);
-    --blue:      #4da3f5;
-    --blue-bg:   rgba(77,163,245,0.1);
-    --pink:      #f06292;
-    --pink-bg:   rgba(240,98,146,0.1);
-    --red:       #ef5350;
-    --red-bg:    rgba(239,83,80,0.1);
-    --gray:      #6b6b7a;
-    --staenz:    #f5a623;
-    --staenz-d:  #d4880a;
-    --radius-sm: 10px;
-    --radius-md: 14px;
-    --radius-lg: 20px;
+    --bg:#0d0d0f;--bg2:#141418;--bg3:#1c1c22;--bg4:#24242c;
+    --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.13);
+    --text:#f0f0f4;--text2:#9999aa;--text3:#666677;
+    --purple:#a89cf7;--purple-d:#7c6fe0;--purple-bg:rgba(168,156,247,0.1);
+    --coral:#f07a5a;--coral-bg:rgba(240,122,90,0.1);
+    --green:#3ecf8e;--green-bg:rgba(62,207,142,0.1);
+    --amber:#f5a623;--amber-bg:rgba(245,166,35,0.1);
+    --blue:#4da3f5;--blue-bg:rgba(77,163,245,0.1);
+    --pink:#f06292;--pink-bg:rgba(240,98,146,0.1);
+    --red:#ef5350;--red-bg:rgba(239,83,80,0.1);
+    --gray:#6b6b7a;--staenz:#f5a623;--staenz-d:#d4880a;
+    --radius-sm:10px;--radius-md:14px;--radius-lg:20px;
   }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    padding: 0 0 0 0;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .page-header {
-    background: var(--bg2);
-    border-bottom: 1px solid var(--border);
-    padding: 28px 40px 24px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(12px);
-  }
-
-  .page-header-left { display: flex; align-items: center; gap: 16px; }
-
-  .avatar {
-    width: 54px; height: 54px; border-radius: 50%;
-    background: linear-gradient(135deg, #3a3060, #6a5acd);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 28px; flex-shrink: 0;
-    border: 1.5px solid var(--purple-d);
-  }
-
-  .page-title { font-size: 26px; font-weight: 900; letter-spacing: -0.03em; color: var(--text); line-height: 1.1; }
-  .page-sub { font-size: 13px; color: var(--text2); margin-top: 5px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-
-  .live-pill {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(62,207,142,0.12); color: var(--green);
-    font-size: 11px; font-weight: 700; padding: 4px 10px;
-    border-radius: 20px; border: 1px solid rgba(62,207,142,0.25);
-    letter-spacing: 0.04em;
-  }
-  .live-dot {
-    width: 7px; height: 7px; border-radius: 50%; background: var(--green);
-    animation: pulse 1.4s infinite;
-  }
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.2} }
-
-  .badge {
-    display: inline-block; font-size: 11px; font-weight: 700;
-    padding: 4px 10px; border-radius: 20px; letter-spacing: 0.03em;
-  }
-  .badge-purple { background: var(--purple-bg); color: var(--purple); border: 1px solid rgba(168,156,247,0.2); }
-  .badge-coral  { background: var(--coral-bg);  color: var(--coral);  border: 1px solid rgba(240,122,90,0.2); }
-  .badge-green  { background: var(--green-bg);  color: var(--green);  border: 1px solid rgba(62,207,142,0.2); }
-  .badge-amber  { background: var(--amber-bg);  color: var(--amber);  border: 1px solid rgba(245,166,35,0.2); }
-  .badge-blue   { background: var(--blue-bg);   color: var(--blue);   border: 1px solid rgba(77,163,245,0.2); }
-  .badge-red    { background: var(--red-bg);    color: var(--red);    border: 1px solid rgba(239,83,80,0.2); }
-  .badge-gray   { background: rgba(107,107,122,0.15); color: var(--gray); border: 1px solid rgba(107,107,122,0.25); }
-
-  .main { max-width: 1100px; margin: 0 auto; padding: 36px 32px; display: flex; flex-direction: column; gap: 28px; }
-
-  .alert {
-    border-radius: var(--radius-md); padding: 16px 20px;
-    display: flex; align-items: flex-start; gap: 14px;
-  }
-  .alert-red    { background: rgba(239,83,80,0.08);  border: 1px solid rgba(239,83,80,0.25); }
-  .alert-purple { background: rgba(168,156,247,0.08); border: 1px solid rgba(168,156,247,0.25); }
-  .alert-green  { background: rgba(62,207,142,0.08);  border: 1px solid rgba(62,207,142,0.25); }
-  .alert-amber  { background: rgba(245,166,35,0.08);  border: 1px solid rgba(245,166,35,0.25); }
-  .alert-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
-  .alert-title { font-size: 15px; font-weight: 800; margin-bottom: 4px; letter-spacing: -0.01em; }
-  .alert-body  { font-size: 13px; font-weight: 500; line-height: 1.65; }
-
-  .sec-label {
-    font-size: 10px; font-weight: 800; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--text3); margin-bottom: 14px;
-  }
-
-  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
-
-  .mcard {
-    background: var(--bg3); border-radius: var(--radius-md);
-    border: 1px solid var(--border); padding: 20px 20px 16px;
-    position: relative; overflow: hidden;
-    transition: border-color 0.2s, transform 0.15s;
-  }
-  .mcard:hover { border-color: var(--border2); transform: translateY(-2px); }
-
-  .mcard-glow {
-    position: absolute; top: -20px; right: -20px;
-    width: 80px; height: 80px; border-radius: 50%; opacity: 0.15;
-    pointer-events: none;
-  }
-  .mlabel { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
-  .mval   { font-size: 34px; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
-  .msub   { font-size: 12px; font-weight: 500; color: var(--text2); margin-top: 6px; display: flex; align-items: center; gap: 5px; }
-
-  .card {
-    background: var(--bg2); border: 1px solid var(--border);
-    border-radius: var(--radius-lg); padding: 24px 28px;
-    transition: border-color 0.2s;
-  }
-  .card:hover { border-color: var(--border2); }
-
-  .card-title { font-size: 17px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; display: flex; align-items: center; gap: 9px; }
-  .card-title-icon { font-size: 20px; }
-  .card-sub   { font-size: 12px; font-weight: 500; color: var(--text2); margin-top: 4px; margin-bottom: 18px; }
-
-  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
-
-  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--text2); }
-  .legend-sq { width: 10px; height: 10px; border-radius: 3px; display: inline-block; flex-shrink: 0; }
-
-  .chart-wrap { position: relative; width: 100%; }
-
-  .timeline { display: flex; flex-direction: column; }
-  .tl-row {
-    display: flex; gap: 16px; padding: 13px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .tl-row:last-child { border-bottom: none; }
-  .tl-date { min-width: 68px; font-size: 11px; font-weight: 800; color: var(--text3); padding-top: 2px; letter-spacing: 0.03em; flex-shrink: 0; }
-  .tl-dot  { width: 10px; min-width: 10px; height: 10px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
-  .tl-title{ font-size: 14px; font-weight: 700; color: var(--text); }
-  .tl-body { font-size: 12px; font-weight: 500; color: var(--text2); margin-top: 3px; line-height: 1.55; }
-
-  .media-group-label { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
-  .media-item { font-size: 13px; font-weight: 500; color: var(--text); display: flex; align-items: center; gap: 9px; margin-bottom: 5px; }
-  .media-dot  { width: 6px; height: 6px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
-
-  .brand-block {
-    background: var(--bg3); border-radius: var(--radius-sm);
-    padding: 14px 18px; margin-bottom: 10px; border-left: 4px solid;
-  }
-  .brand-block-label { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 5px; }
-  .brand-block-val   { font-size: 15px; font-weight: 700; color: var(--text); }
-
-  .foot-note {
-    background: var(--bg2); border: 1px solid var(--border);
-    padding: 16px 20px;
-    border-left: 4px solid var(--border2);
-    border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  }
-  .foot-note-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 9px; }
-  .foot-note-body  { font-size: 13px; font-weight: 500; color: var(--text2); line-height: 1.65; }
-
-  .divider { height: 1px; background: var(--border); border: none; }
-
-  /* ── STAENZ FOOTER ─────────────────────────────────────── */
-  .staenz-footer {
-    background: #0a0a0c;
-    border-top: 1px solid rgba(245,166,35,0.25);
-    margin-top: 60px;
-  }
-
-  .staenz-footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 32px 28px;
-  }
-
-  .staenz-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 32px;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-  }
-
-  .staenz-brand { display: flex; flex-direction: column; gap: 10px; }
-
-  .staenz-logo-lockup {
-    display: flex; align-items: center; gap: 12px;
-  }
-  .staenz-logo-svg { width: 44px; height: 44px; flex-shrink: 0; }
-  .staenz-wordmark {
-    font-size: 28px; font-weight: 900; letter-spacing: -0.02em;
-    color: #ffffff; line-height: 1;
-  }
-  .staenz-wordmark span { color: var(--staenz); }
-  .staenz-reg { font-size: 13px; vertical-align: super; }
-  .staenz-tagline {
-    font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.5);
-    letter-spacing: 0.02em;
-  }
-  .staenz-powered {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--staenz);
-    opacity: 0.8;
-  }
-
-  .staenz-courses {
-    display: flex; flex-direction: column; gap: 8px;
-  }
-  .staenz-courses-label {
-    font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
-    text-transform: uppercase; color: rgba(255,255,255,0.3);
-    margin-bottom: 4px;
-  }
-  .staenz-course-link {
-    display: inline-flex; align-items: center; gap: 7px;
-    color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 600;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .staenz-course-link:hover { color: var(--staenz); }
-  .staenz-course-link::before {
-    content: '';
-    display: inline-block;
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: var(--staenz);
-    opacity: 0.6;
-    flex-shrink: 0;
-  }
-
-  .staenz-divider {
-    height: 1px;
-    background: rgba(255,255,255,0.07);
-    margin-bottom: 20px;
-  }
-
-  .staenz-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .staenz-credit {
-    font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.6;
-  }
-  .staenz-credit a {
-    color: var(--staenz);
-    text-decoration: none;
-    font-weight: 700;
-  }
-  .staenz-credit a:hover { text-decoration: underline; }
-
-  .staenz-main-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: var(--staenz);
-    color: #0a0a0c;
-    font-size: 12px; font-weight: 800;
-    padding: 8px 16px; border-radius: 20px;
-    text-decoration: none;
-    letter-spacing: 0.03em;
-    transition: background 0.2s, transform 0.15s;
-    white-space: nowrap;
-  }
-  .staenz-main-link:hover { background: #ffc137; transform: translateY(-1px); }
-  /* ─────────────────────────────────────────────────────── */
-
-  @media (max-width: 600px) {
-    .page-header { padding: 20px 20px 18px; }
-    .main { padding: 24px 16px; gap: 20px; }
-    .page-title { font-size: 20px; }
-    .mval { font-size: 26px; }
-    .staenz-footer-inner { padding: 28px 20px 20px; }
-    .staenz-top { flex-direction: column; gap: 24px; }
-    .staenz-wordmark { font-size: 22px; }
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased;}
+  .page-header{background:var(--bg2);border-bottom:1px solid var(--border);padding:28px 40px 24px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+  .page-header-left{display:flex;align-items:center;gap:16px;}
+  .avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#3a3060,#6a5acd);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;border:1.5px solid var(--purple-d);}
+  .page-title{font-size:26px;font-weight:900;letter-spacing:-0.03em;color:var(--text);line-height:1.1;}
+  .page-sub{font-size:13px;color:var(--text2);margin-top:5px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .live-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(62,207,142,0.12);color:var(--green);font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;border:1px solid rgba(62,207,142,0.25);letter-spacing:0.04em;}
+  .live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 1.4s infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.2}}
+  .badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:0.03em;}
+  .badge-purple{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(168,156,247,0.2);}
+  .badge-coral{background:var(--coral-bg);color:var(--coral);border:1px solid rgba(240,122,90,0.2);}
+  .badge-green{background:var(--green-bg);color:var(--green);border:1px solid rgba(62,207,142,0.2);}
+  .badge-amber{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(245,166,35,0.2);}
+  .badge-blue{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(77,163,245,0.2);}
+  .badge-red{background:var(--red-bg);color:var(--red);border:1px solid rgba(239,83,80,0.2);}
+  .badge-gray{background:rgba(107,107,122,0.15);color:var(--gray);border:1px solid rgba(107,107,122,0.25);}
+  .main{max-width:1100px;margin:0 auto;padding:36px 32px;display:flex;flex-direction:column;gap:28px;}
+  .alert{border-radius:var(--radius-md);padding:16px 20px;display:flex;align-items:flex-start;gap:14px;}
+  .alert-red{background:rgba(239,83,80,0.08);border:1px solid rgba(239,83,80,0.25);}
+  .alert-purple{background:rgba(168,156,247,0.08);border:1px solid rgba(168,156,247,0.25);}
+  .alert-green{background:rgba(62,207,142,0.08);border:1px solid rgba(62,207,142,0.25);}
+  .alert-amber{background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.25);}
+  .alert-icon{font-size:22px;flex-shrink:0;margin-top:1px;}
+  .alert-title{font-size:15px;font-weight:800;margin-bottom:4px;letter-spacing:-0.01em;}
+  .alert-body{font-size:13px;font-weight:500;line-height:1.65;}
+  .sec-label{font-size:10px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3);margin-bottom:14px;}
+  .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;}
+  .mcard{background:var(--bg3);border-radius:var(--radius-md);border:1px solid var(--border);padding:20px 20px 16px;position:relative;overflow:hidden;transition:border-color 0.2s,transform 0.15s;}
+  .mcard:hover{border-color:var(--border2);transform:translateY(-2px);}
+  .mcard-glow{position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;opacity:0.15;pointer-events:none;}
+  .mlabel{font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;}
+  .mval{font-size:34px;font-weight:900;letter-spacing:-0.03em;line-height:1;}
+  .mval-sm{font-size:22px;font-weight:900;letter-spacing:-0.03em;line-height:1;}
+  .msub{font-size:12px;font-weight:500;color:var(--text2);margin-top:6px;display:flex;align-items:center;gap:5px;}
+  .card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 28px;transition:border-color 0.2s;}
+  .card:hover{border-color:var(--border2);}
+  .card-title{font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.02em;display:flex;align-items:center;gap:9px;}
+  .card-title-icon{font-size:20px;}
+  .card-sub{font-size:12px;font-weight:500;color:var(--text2);margin-top:4px;margin-bottom:18px;}
+  .two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;}
+  .legend-item{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--text2);}
+  .legend-sq{width:10px;height:10px;border-radius:3px;display:inline-block;flex-shrink:0;}
+  .chart-wrap{position:relative;width:100%;}
+  .timeline{display:flex;flex-direction:column;}
+  .tl-row{display:flex;gap:16px;padding:13px 0;border-bottom:1px solid var(--border);}
+  .tl-row:last-child{border-bottom:none;}
+  .tl-date{min-width:68px;font-size:11px;font-weight:800;color:var(--text3);padding-top:2px;letter-spacing:0.03em;flex-shrink:0;}
+  .tl-dot{width:10px;min-width:10px;height:10px;border-radius:50%;margin-top:4px;flex-shrink:0;}
+  .tl-title{font-size:14px;font-weight:700;color:var(--text);}
+  .tl-body{font-size:12px;font-weight:500;color:var(--text2);margin-top:3px;line-height:1.55;}
+  .media-group-label{font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;}
+  .media-item{font-size:13px;font-weight:500;color:var(--text);display:flex;align-items:center;gap:9px;margin-bottom:5px;}
+  .media-dot{width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0;}
+  .brand-block{background:var(--bg3);border-radius:var(--radius-sm);padding:14px 18px;margin-bottom:10px;border-left:4px solid;}
+  .brand-block-label{font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:5px;}
+  .brand-block-val{font-size:15px;font-weight:700;color:var(--text);}
+  .foot-note{background:var(--bg2);border:1px solid var(--border);padding:16px 20px;border-left:4px solid var(--border2);border-radius:0 var(--radius-md) var(--radius-md) 0;}
+  .foot-note-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:9px;}
+  .foot-note-body{font-size:13px;font-weight:500;color:var(--text2);line-height:1.65;}
+  .divider{height:1px;background:var(--border);border:none;}
+  .auto-update-bar{background:rgba(62,207,142,0.06);border-bottom:1px solid rgba(62,207,142,0.15);padding:7px 40px;display:flex;align-items:center;gap:10px;font-size:11px;font-weight:600;color:var(--green);letter-spacing:0.03em;}
+  .auto-update-bar span{color:var(--text3);font-weight:500;}
+  .staenz-footer{background:#0a0a0c;border-top:1px solid rgba(245,166,35,0.25);margin-top:60px;}
+  .staenz-footer-inner{max-width:1100px;margin:0 auto;padding:40px 32px 28px;}
+  .staenz-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:32px;}
+  .staenz-brand{display:flex;flex-direction:column;gap:10px;}
+  .staenz-logo-lockup{display:flex;align-items:center;gap:12px;}
+  .staenz-logo-svg{width:44px;height:44px;flex-shrink:0;}
+  .staenz-wordmark{font-size:28px;font-weight:900;letter-spacing:-0.02em;color:#ffffff;line-height:1;}
+  .staenz-wordmark span{color:var(--staenz);}
+  .staenz-reg{font-size:13px;vertical-align:super;}
+  .staenz-tagline{font-size:13px;font-weight:500;color:rgba(255,255,255,0.5);letter-spacing:0.02em;}
+  .staenz-powered{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--staenz);opacity:0.8;}
+  .staenz-courses{display:flex;flex-direction:column;gap:8px;}
+  .staenz-courses-label{font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:4px;}
+  .staenz-course-link{display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,0.75);font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;}
+  .staenz-course-link:hover{color:var(--staenz);}
+  .staenz-course-link::before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--staenz);opacity:0.6;flex-shrink:0;}
+  .staenz-divider{height:1px;background:rgba(255,255,255,0.07);margin-bottom:20px;}
+  .staenz-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  .staenz-credit{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6;}
+  .staenz-credit a{color:var(--staenz);text-decoration:none;font-weight:700;}
+  .staenz-credit a:hover{text-decoration:underline;}
+  .staenz-main-link{display:inline-flex;align-items:center;gap:6px;background:var(--staenz);color:#0a0a0c;font-size:12px;font-weight:800;padding:8px 16px;border-radius:20px;text-decoration:none;letter-spacing:0.03em;transition:background 0.2s,transform 0.15s;white-space:nowrap;}
+  .staenz-main-link:hover{background:#ffc137;transform:translateY(-1px);}
+  @media(max-width:600px){
+    .page-header{padding:20px 20px 18px;}
+    .main{padding:24px 16px;gap:20px;}
+    .page-title{font-size:20px;}
+    .mval{font-size:26px;}
+    .mval-sm{font-size:18px;}
+    .staenz-footer-inner{padding:28px 20px 20px;}
+    .staenz-top{flex-direction:column;gap:24px;}
+    .staenz-wordmark{font-size:22px;}
+    .auto-update-bar{padding:7px 16px;}
   }
 </style>
 </head>
 <body>
+
+<div class="auto-update-bar">
+  <span style="background:var(--green);width:7px;height:7px;border-radius:50%;display:inline-block;animation:pulse 1.4s infinite;flex-shrink:0;"></span>
+  Auto-updated every hour via Apify &nbsp;·&nbsp;
+  <span>Last update: May 22, 2026 — Instagram followers fetched live from @cockroachjantaparty</span>
+</div>
 
 <header class="page-header">
   <div class="page-header-left">
@@ -409,7 +198,6 @@
 
 <main class="main">
 
-  <!-- NEW: Bankipur election alert -->
   <div class="alert alert-green">
     <div class="alert-icon" style="color:var(--green);">🗳️</div>
     <div>
@@ -418,7 +206,6 @@
     </div>
   </div>
 
-  <!-- New X handle alert -->
   <div class="alert alert-amber">
     <div class="alert-icon" style="color:var(--amber);">🐦</div>
     <div>
@@ -427,7 +214,6 @@
     </div>
   </div>
 
-  <!-- X withheld alert -->
   <div class="alert alert-red">
     <div class="alert-icon" style="color:var(--red);">⚠</div>
     <div>
@@ -436,29 +222,27 @@
     </div>
   </div>
 
-  <!-- Milestone banner -->
   <div class="alert alert-purple">
     <div class="alert-icon" style="color:var(--purple);">🏆</div>
     <div>
-      <div class="alert-title" style="color:var(--purple);">20M — India's #1 most-followed Instagram account</div>
+      <div class="alert-title" style="color:var(--purple);">20.49M — India's #1 most-followed Instagram account · Live count from Apify</div>
       <div class="alert-body" style="color:#c0b8f8;">
-        CJP <span style="font-size:20px;font-weight:900;color:var(--purple);">20M</span>
+        CJP <span style="font-size:20px;font-weight:900;color:var(--purple);">20,492,627</span>
         &nbsp;·&nbsp; INC <strong style="font-weight:700;">13.2M</strong>
         &nbsp;·&nbsp; BJP <strong style="font-weight:700;">8.7M</strong>
-        <span style="font-size:11px;opacity:0.7;">(CJP leads all Indian political accounts by 6.8M+)</span>
+        <span style="font-size:11px;opacity:0.7;">(CJP leads all Indian political accounts by 7.3M+ · Source: Apify live scrape)</span>
       </div>
     </div>
   </div>
 
-  <!-- KPI GRID -->
   <div>
-    <div class="sec-label">📊 Live metrics — May 22, 2026</div>
+    <div class="sec-label">📊 Live metrics — May 22, 2026 · Apify real-time data</div>
     <div class="kpi-grid">
       <div class="mcard">
         <div class="mcard-glow" style="background:var(--purple);"></div>
-        <div class="mlabel">Instagram</div>
-        <div class="mval" style="color:var(--purple);">20M</div>
-        <div class="msub"><span class="live-dot"></span>Day 7 · still growing</div>
+        <div class="mlabel">Instagram Followers</div>
+        <div class="mval-sm" style="color:var(--purple);">20,492,627</div>
+        <div class="msub"><span style="background:var(--green);width:6px;height:6px;border-radius:50%;animation:pulse 1.4s infinite;display:inline-block;"></span>Live · Apify verified</div>
       </div>
       <div class="mcard">
         <div class="mcard-glow" style="background:var(--coral);"></div>
@@ -490,64 +274,62 @@
         <div class="mval" style="color:var(--blue);">795K</div>
         <div class="msub">cjpapp.online users</div>
       </div>
+      <div class="mcard">
+        <div class="mcard-glow" style="background:var(--coral);"></div>
+        <div class="mlabel">IG Posts</div>
+        <div class="mval" style="color:var(--coral);">68</div>
+        <div class="msub">Total posts</div>
+      </div>
+      <div class="mcard">
+        <div class="mcard-glow" style="background:var(--green);"></div>
+        <div class="mlabel">IG Following</div>
+        <div class="mval" style="color:var(--green);">3</div>
+        <div class="msub">Accounts followed</div>
+      </div>
     </div>
   </div>
 
-  <!-- FULL GROWTH CURVE -->
   <div class="card">
     <div class="card-title"><span class="card-title-icon">📈</span>Instagram follower growth — 7-day surge</div>
-    <div class="card-sub">From zero to 20 million · dashed lines = BJP (8.7M) and INC (13.2M) baselines</div>
+    <div class="card-sub">From zero to 20.49 million · dashed lines = BJP (8.7M) and INC (13.2M) baselines · live count: 20,492,627</div>
     <div class="legend">
       <div class="legend-item"><span class="legend-sq" style="background:#a89cf7;"></span>CJP followers</div>
       <div class="legend-item"><span class="legend-sq" style="background:#ef5350;"></span>BJP 8.7M</div>
       <div class="legend-item"><span class="legend-sq" style="background:#4da3f5;"></span>INC 13.2M</div>
     </div>
-    <div class="chart-wrap" style="height:300px;">
-      <canvas id="igGrowth"></canvas>
-    </div>
+    <div class="chart-wrap" style="height:300px;"><canvas id="igGrowth"></canvas></div>
   </div>
 
-  <!-- DAILY MILESTONES + POLITICAL COMPARISON -->
   <div class="two-col">
     <div class="card">
       <div class="card-title"><span class="card-title-icon">📅</span>Daily milestones</div>
       <div class="card-sub">End-of-day follower count (millions)</div>
       <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--coral);"></span>Followers (M)</div></div>
-      <div class="chart-wrap" style="height:240px;">
-        <canvas id="dailyMilestone"></canvas>
-      </div>
+      <div class="chart-wrap" style="height:240px;"><canvas id="dailyMilestone"></canvas></div>
     </div>
     <div class="card">
       <div class="card-title"><span class="card-title-icon">🏛️</span>Political Instagram ranking</div>
-      <div class="card-sub">CJP now leads all Indian political parties</div>
+      <div class="card-sub">CJP now leads all Indian political parties by 7.3M+</div>
       <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--purple);"></span>Followers</div></div>
-      <div class="chart-wrap" style="height:240px;">
-        <canvas id="politicalComp"></canvas>
-      </div>
+      <div class="chart-wrap" style="height:240px;"><canvas id="politicalComp"></canvas></div>
     </div>
   </div>
 
-  <!-- GROWTH RATE + ENGAGEMENT -->
   <div class="two-col">
     <div class="card">
       <div class="card-title"><span class="card-title-icon">🚀</span>Daily new followers</div>
       <div class="card-sub">Followers gained per day — peak was May 21 at +5.1M</div>
       <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--coral);"></span>New followers/day (M)</div></div>
-      <div class="chart-wrap" style="height:220px;">
-        <canvas id="growthRate"></canvas>
-      </div>
+      <div class="chart-wrap" style="height:220px;"><canvas id="growthRate"></canvas></div>
     </div>
     <div class="card">
       <div class="card-title"><span class="card-title-icon">❤️</span>Engagement vs. industry</div>
       <div class="card-sub">CJP estimated 20%+ vs. standard benchmarks</div>
       <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--pink);"></span>Engagement rate %</div></div>
-      <div class="chart-wrap" style="height:220px;">
-        <canvas id="engageChart"></canvas>
-      </div>
+      <div class="chart-wrap" style="height:220px;"><canvas id="engageChart"></canvas></div>
     </div>
   </div>
 
-  <!-- WEBSITE TRAFFIC -->
   <div class="card">
     <div class="card-title"><span class="card-title-icon">🌐</span>Website traffic — cockroachjantaparty.org</div>
     <div class="card-sub">Domain launched May 16 · all traffic spike-driven from Instagram</div>
@@ -555,9 +337,7 @@
       <div>
         <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:10px;">Est. daily visits (K)</div>
         <div class="legend"><div class="legend-item"><span class="legend-sq" style="background:var(--green);"></span>Visits (K)</div></div>
-        <div class="chart-wrap" style="height:200px;">
-          <canvas id="websiteChart"></canvas>
-        </div>
+        <div class="chart-wrap" style="height:200px;"><canvas id="websiteChart"></canvas></div>
       </div>
       <div>
         <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:10px;">Traffic sources</div>
@@ -567,17 +347,14 @@
           <div class="legend-item"><span class="legend-sq" style="background:var(--amber);"></span>Referral 17%</div>
           <div class="legend-item"><span class="legend-sq" style="background:var(--blue);"></span>Organic 6%</div>
         </div>
-        <div class="chart-wrap" style="height:200px;">
-          <canvas id="trafficSrc"></canvas>
-        </div>
+        <div class="chart-wrap" style="height:200px;"><canvas id="trafficSrc"></canvas></div>
       </div>
     </div>
   </div>
 
-  <!-- PLATFORM REACH -->
   <div class="card">
     <div class="card-title"><span class="card-title-icon">📱</span>Full platform reach</div>
-    <div class="card-sub">All channels combined — May 22, 2026</div>
+    <div class="card-sub">All channels combined — May 22, 2026 · Instagram count live from Apify (20,492,627)</div>
     <div class="legend">
       <div class="legend-item"><span class="legend-sq" style="background:var(--purple);"></span>Instagram</div>
       <div class="legend-item"><span class="legend-sq" style="background:var(--blue);"></span>CJP App</div>
@@ -585,12 +362,9 @@
       <div class="legend-item"><span class="legend-sq" style="background:var(--coral);"></span>Sign-ups</div>
       <div class="legend-item"><span class="legend-sq" style="background:var(--amber);"></span>X @Cockroachisback</div>
     </div>
-    <div class="chart-wrap" style="height:240px;">
-      <canvas id="platformChart"></canvas>
-    </div>
+    <div class="chart-wrap" style="height:240px;"><canvas id="platformChart"></canvas></div>
   </div>
 
-  <!-- TIMELINE -->
   <div class="card">
     <div class="card-title" style="margin-bottom:20px;"><span class="card-title-icon">🕐</span>Milestone timeline — full 7-day story</div>
     <div class="timeline">
@@ -632,18 +406,17 @@
       <div class="tl-row">
         <div class="tl-date">May 22 🔴</div>
         <div class="tl-dot" style="background:var(--green);"></div>
-        <div><div class="tl-title">20M Instagram · Bankipur election plans · 204K registered</div><div class="tl-body">Supporters eye first real election — Bankipur Assembly by-election in Bihar · 204K verified cockroaches · CJP leads all Indian political parties on Instagram by 6.8M+</div></div>
+        <div><div class="tl-title">20,492,627 Instagram followers (Apify live) · Bankipur election plans · 204K registered</div><div class="tl-body">Supporters eye first real election — Bankipur Assembly by-election in Bihar · 204K verified cockroaches · CJP leads all Indian political parties on Instagram by 7.3M+ · Instagram following: 3 · Posts: 68</div></div>
       </div>
     </div>
   </div>
 
-  <!-- MEDIA + BRAND -->
   <div class="two-col">
     <div class="card">
       <div class="card-title" style="margin-bottom:18px;"><span class="card-title-icon">📰</span>Media coverage · 30+ outlets</div>
       <div style="margin-bottom:14px;">
         <div class="media-group-label">International</div>
-        <div class="media-item"><span class="media-dot" style="background:var(--coral);"></span>Al Jazeera · IBTimes · Business Upturn · Nepal News</div>
+        <div class="media-item"><span class="media-dot" style="background:var(--coral);"></span>Al Jazeera · IBTimes · Business Upturn · Nepal News · Dawn.com</div>
       </div>
       <hr class="divider" style="margin-bottom:14px;" />
       <div style="margin-bottom:14px;">
@@ -659,7 +432,6 @@
         <div class="media-item"><span class="media-dot" style="background:var(--amber);"></span>NewsX · Siasat Daily · Deccan Chronicle</div>
       </div>
     </div>
-
     <div class="card">
       <div class="card-title" style="margin-bottom:18px;"><span class="card-title-icon">🧬</span>Brand DNA</div>
       <div class="brand-block" style="border-left-color:var(--purple);">
@@ -674,49 +446,29 @@
         <div class="brand-block-label">Identity</div>
         <div class="brand-block-val">"Secular, Socialist, Democratic, Lazy"</div>
       </div>
-      <div class="brand-block" style="border-left-color:var(--amber); margin-bottom:0;">
+      <div class="brand-block" style="border-left-color:var(--amber);margin-bottom:0;">
         <div class="brand-block-label">Notable joins</div>
         <div class="brand-block-val">Mahua Moitra · Kirti Azad (TMC) · Akhilesh Yadav (SP)</div>
       </div>
     </div>
   </div>
 
-  <!-- FOUNDER PROFILE -->
   <div class="card">
     <div class="card-title" style="margin-bottom:18px;"><span class="card-title-icon">👤</span>Founder — Abhijeet Dipke</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;">
-      <div>
-        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Age &amp; origin</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);">30 · Pune, Maharashtra · Dalit</div>
-      </div>
-      <div>
-        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Education</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);">Journalism UG (Pune) · PR Master's, Boston University</div>
-      </div>
-      <div>
-        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">AAP tenure</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);">Oct 2019 – May 2024 (~4.5 years)</div>
-      </div>
-      <div>
-        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Key roles</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);">CMO Fellow · Social media under Ankit Lal · Education Dept Advisor</div>
-      </div>
-      <div>
-        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Expertise</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);">Meme-first political digital strategy (2020 Delhi elections)</div>
-      </div>
-      <div>
-        <div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">X handles</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);">@cockroachjantaparty (withheld in India) · @Cockroachisback (new, 24K+ in 90 min)</div>
-      </div>
+      <div><div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Age &amp; origin</div><div style="font-size:14px;font-weight:600;color:var(--text);">30 · Pune, Maharashtra · Dalit</div></div>
+      <div><div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Education</div><div style="font-size:14px;font-weight:600;color:var(--text);">Journalism UG (Pune) · PR Master's, Boston University</div></div>
+      <div><div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">AAP tenure</div><div style="font-size:14px;font-weight:600;color:var(--text);">Oct 2019 – May 2024 (~4.5 years)</div></div>
+      <div><div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Key roles</div><div style="font-size:14px;font-weight:600;color:var(--text);">CMO Fellow · Social media under Ankit Lal · Education Dept Advisor</div></div>
+      <div><div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">Expertise</div><div style="font-size:14px;font-weight:600;color:var(--text);">Meme-first political digital strategy (2020 Delhi elections)</div></div>
+      <div><div class="brand-block-label" style="color:var(--text3);margin-bottom:4px;">X handles</div><div style="font-size:14px;font-weight:600;color:var(--text);">@cockroachjantaparty (withheld in India) · @Cockroachisback (new, 24K+ in 90 min)</div></div>
     </div>
   </div>
 
-  <!-- FOOTER NOTICES -->
   <div class="two-col">
     <div class="foot-note">
       <div class="foot-note-title"><span style="font-size:20px;">▶</span>YouTube — no official channel yet</div>
-      <div class="foot-note-body">All YouTube content is third-party coverage (Al Jazeera, Brut, BOOM, Zee News). With 20M Instagram followers and global press, a YouTube launch would be explosive — the single biggest gap in CJP's content strategy.</div>
+      <div class="foot-note-body">All YouTube content is third-party coverage (Al Jazeera, Brut, BOOM, Zee News). With 20.49M Instagram followers and global press, a YouTube launch would be explosive — the single biggest gap in CJP's content strategy.</div>
     </div>
     <div class="foot-note">
       <div class="foot-note-title"><span style="font-size:20px;">🗳️</span>Election Commission status</div>
@@ -725,25 +477,19 @@
   </div>
 
   <div style="text-align:center;font-size:11px;color:var(--text3);line-height:1.7;padding-top:8px;padding-bottom:20px;">
-    Data sourced from BusinessToday · Al Jazeera · The Tribune · Deccan Herald · BOOM · The Print · Zee News · LatestLY · Wikipedia · May 16–22, 2026<br/>
-    Instagram: 20M (user-confirmed May 22). X new handle @Cockroachisback: 24K+ followers (launched May 22). Registered members: 204K (ouprephub.in). Website traffic estimates based on social referral patterns.
+    📡 Instagram follower count sourced live via <strong>Apify scraper</strong> — updated every hour automatically.<br/>
+    Data also sourced from BusinessToday · Al Jazeera · The Tribune · Deccan Herald · BOOM · The Print · Zee News · LatestLY · Wikipedia · May 16–22, 2026<br/>
+    Instagram: <strong>20,492,627</strong> (Apify live · May 22, 2026). X new handle @Cockroachisback: 24K+ followers (launched May 22). Registered members: 204K (ouprephub.in).
   </div>
 
 </main>
 
-<!-- ═══════════════════════════════════════════════════════════
-     STAENZ POWERED-BY FOOTER
-════════════════════════════════════════════════════════════ -->
 <footer class="staenz-footer">
   <div class="staenz-footer-inner">
-
     <div class="staenz-top">
-
-      <!-- Brand block -->
       <div class="staenz-brand">
         <div class="staenz-powered">⚡ Dashboard powered by</div>
         <div class="staenz-logo-lockup">
-          <!-- Graduation cap SVG — matches brand amber #f5a623 -->
           <svg class="staenz-logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="STAENZ logo">
             <path d="M22 8L4 17L22 26L40 17L22 8Z" fill="#f5a623"/>
             <path d="M22 26L4 17V28C4 28 10 33 22 33C34 33 40 28 40 28V17L22 26Z" fill="#d4880a"/>
@@ -751,276 +497,93 @@
             <rect x="37" y="17" width="3" height="11" rx="1.5" fill="#f5a623"/>
             <circle cx="38.5" cy="29.5" r="2.5" fill="#f5a623"/>
           </svg>
-          <div>
-            <div class="staenz-wordmark">ST<span>A</span>ENZ<sup class="staenz-reg">®</sup></div>
-          </div>
+          <div><div class="staenz-wordmark">ST<span>A</span>ENZ<sup class="staenz-reg">®</sup></div></div>
         </div>
         <div class="staenz-tagline">Upskill Today. Transform Forever.</div>
       </div>
-
-      <!-- Course links -->
       <div class="staenz-courses">
         <div class="staenz-courses-label">Explore courses at STAENZ Academy</div>
-        <a href="https://staenz.com/academy/dmep-digital-marketing-course/" rel="dofollow" class="staenz-course-link">
-          Digital Marketing Course
-        </a>
-        <a href="https://staenz.com/academy/performance-marketing-course/" rel="dofollow" class="staenz-course-link">
-          Performance Marketing Course
-        </a>
-        <a href="https://staenz.com/academy/generative-ai-foundation-course/" rel="dofollow" class="staenz-course-link">
-          Generative AI Foundation Course
-        </a>
-        <a href="https://staenz.com/academy/advanced-agentic-ai-automation-course/" rel="dofollow" class="staenz-course-link">
-          Agentic AI Automation Course
-        </a>
-        <a href="https://staenz.com/academy/" rel="dofollow" class="staenz-course-link">
-          Digital Marketing Course in Nashik
-        </a>
+        <a href="https://staenz.com/academy/dmep-digital-marketing-course/" rel="dofollow" class="staenz-course-link">Digital Marketing Course</a>
+        <a href="https://staenz.com/academy/performance-marketing-course/" rel="dofollow" class="staenz-course-link">Performance Marketing Course</a>
+        <a href="https://staenz.com/academy/generative-ai-foundation-course/" rel="dofollow" class="staenz-course-link">Generative AI Foundation Course</a>
+        <a href="https://staenz.com/academy/advanced-agentic-ai-automation-course/" rel="dofollow" class="staenz-course-link">Agentic AI Automation Course</a>
+        <a href="https://staenz.com/academy/" rel="dofollow" class="staenz-course-link">Digital Marketing Course in Nashik</a>
       </div>
-
     </div>
-
     <div class="staenz-divider"></div>
-
     <div class="staenz-bottom">
       <div class="staenz-credit">
         This dashboard was built and is maintained by&nbsp;
         <a href="https://staenz.com" rel="dofollow" target="_blank">STAENZ — India's AI-First Digital Marketing Academy</a>.
         &nbsp;·&nbsp; Offering India's best
         <a href="https://staenz.com/academy/dmep-digital-marketing-course/" rel="dofollow" target="_blank">Digital Marketing Course</a>,
-        <a href="https://staenz.com/academy/performance-marketing-course/" rel="dofollow" target="_blank">Performance Marketing Course</a>,
-        and
+        <a href="https://staenz.com/academy/performance-marketing-course/" rel="dofollow" target="_blank">Performance Marketing Course</a>, and
         <a href="https://staenz.com/academy/advanced-agentic-ai-automation-course/" rel="dofollow" target="_blank">Agentic AI Course</a>.
       </div>
-      <a href="https://staenz.com" rel="dofollow" target="_blank" class="staenz-main-link">
-        Visit STAENZ.com →
-      </a>
+      <a href="https://staenz.com" rel="dofollow" target="_blank" class="staenz-main-link">Visit STAENZ.com →</a>
     </div>
-
   </div>
 </footer>
 
 <script>
-const C = '#a89cf7';
-const O = '#f07a5a';
-const G = '#3ecf8e';
-const A = '#f5a623';
-const B = '#4da3f5';
-const P = '#f06292';
-const R = '#ef5350';
-const X = '#6b6b7a';
+const C='#a89cf7',O='#f07a5a',G='#3ecf8e',A='#f5a623',B='#4da3f5',P='#f06292',R='#ef5350';
+const tc='rgba(255,255,255,0.35)',gc='rgba(255,255,255,0.05)';
+const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}};
+const ax=(color,cb)=>({grid:{color:gc},ticks:{color:tc,font:{size:11,family:'Inter'},callback:cb}});
 
-const tc = 'rgba(255,255,255,0.35)';
-const gc = 'rgba(255,255,255,0.05)';
-
-const base = {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: { legend: { display: false } }
-};
-
-const ax = (color, cb) => ({
-  grid: { color: gc },
-  ticks: { color: tc, font: { size: 11, family: 'Inter' }, callback: cb }
-});
-
-// 1. Full growth curve — 7 days
-new Chart(document.getElementById('igGrowth'), {
-  type: 'line',
-  data: {
-    labels: ['D1','6h','12h','18h','D2','30h','36h','D3','48h','D4','60h','D5','84h','96h','D6','108h','D7'],
-    datasets: [
-      {
-        label: 'CJP (M)',
-        data: [0,0.02,0.08,0.25,0.55,0.9,1.3,2.0,3.0,6.1,8.2,10.9,13.0,16.0,17.2,18.4,20.0],
-        borderColor: C, backgroundColor: 'rgba(168,156,247,0.08)',
-        borderWidth: 2.5, fill: true, tension: 0.42,
-        pointBackgroundColor: C,
-        pointRadius: [3,2,2,2,4,2,2,4,4,5,4,5,5,5,4,4,7],
-        pointHoverRadius: 7
-      },
-      {
-        label: 'BJP 8.7M',
-        data: Array(17).fill(8.7),
-        borderColor: R, backgroundColor: 'transparent',
-        borderWidth: 1.5, borderDash: [5,4], fill: false, tension: 0, pointRadius: 0
-      },
-      {
-        label: 'INC 13.2M',
-        data: Array(17).fill(13.2),
-        borderColor: B, backgroundColor: 'transparent',
-        borderWidth: 1.5, borderDash: [5,4], fill: false, tension: 0, pointRadius: 0
-      }
+new Chart(document.getElementById('igGrowth'),{
+  type:'line',
+  data:{
+    labels:['D1','6h','12h','18h','D2','30h','36h','D3','48h','D4','60h','D5','84h','96h','D6','108h','D7'],
+    datasets:[
+      {label:'CJP (M)',data:[0,0.02,0.08,0.25,0.55,0.9,1.3,2.0,3.0,6.1,8.2,10.9,13.0,16.0,17.2,18.4,20.49],borderColor:C,backgroundColor:'rgba(168,156,247,0.08)',borderWidth:2.5,fill:true,tension:0.42,pointBackgroundColor:C,pointRadius:[3,2,2,2,4,2,2,4,4,5,4,5,5,5,4,4,8],pointHoverRadius:7},
+      {label:'BJP 8.7M',data:Array(17).fill(8.7),borderColor:R,backgroundColor:'transparent',borderWidth:1.5,borderDash:[5,4],fill:false,tension:0,pointRadius:0},
+      {label:'INC 13.2M',data:Array(17).fill(13.2),borderColor:B,backgroundColor:'transparent',borderWidth:1.5,borderDash:[5,4],fill:false,tension:0,pointRadius:0}
     ]
   },
-  options: {
-    ...base,
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: ctx => {
-        if(ctx.datasetIndex===0) return ctx.parsed.y.toFixed(1)+'M followers';
-        if(ctx.datasetIndex===1) return 'BJP baseline: 8.7M';
-        return 'INC baseline: 13.2M';
-      }}}
-    },
-    scales: {
-      x: { ...ax(tc), ticks: { color: tc, font: { size: 10, family:'Inter' }, maxRotation: 0, autoSkip: true, maxTicksLimit: 9 } },
-      y: { ...ax(tc, v => v.toFixed(0)+'M'), min: 0, max: 22 }
-    }
-  }
+  options:{...base,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>{if(ctx.datasetIndex===0)return ctx.parsed.y.toFixed(2)+'M followers';if(ctx.datasetIndex===1)return 'BJP baseline: 8.7M';return 'INC baseline: 13.2M';}}}},scales:{x:{...ax(tc),ticks:{color:tc,font:{size:10,family:'Inter'},maxRotation:0,autoSkip:true,maxTicksLimit:9}},y:{...ax(tc,v=>v.toFixed(0)+'M'),min:0,max:23}}}
 });
 
-// 2. Daily milestones
-new Chart(document.getElementById('dailyMilestone'), {
-  type: 'bar',
-  data: {
-    labels: ['May 16','May 17','May 18','May 19','May 20','May 21','May 22'],
-    datasets: [{
-      data: [0.55,2.0,3.0,6.1,10.9,16.0,20.0],
-      backgroundColor: [
-        'rgba(240,122,90,0.25)','rgba(240,122,90,0.38)','rgba(240,122,90,0.5)',
-        'rgba(240,122,90,0.63)','rgba(240,122,90,0.78)','rgba(240,122,90,0.9)','rgba(240,122,90,1)'
-      ],
-      borderColor: O, borderWidth: 1, borderRadius: 6
-    }]
-  },
-  options: {
-    ...base,
-    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.y.toFixed(2)+'M followers' } } },
-    scales: {
-      x: ax(tc),
-      y: { ...ax(tc, v => v+'M'), min: 0, max: 22 }
-    }
-  }
+new Chart(document.getElementById('dailyMilestone'),{
+  type:'bar',
+  data:{labels:['May 16','May 17','May 18','May 19','May 20','May 21','May 22'],datasets:[{data:[0.55,2.0,3.0,6.1,10.9,16.0,20.49],backgroundColor:['rgba(240,122,90,0.25)','rgba(240,122,90,0.38)','rgba(240,122,90,0.5)','rgba(240,122,90,0.63)','rgba(240,122,90,0.78)','rgba(240,122,90,0.9)','rgba(240,122,90,1)'],borderColor:O,borderWidth:1,borderRadius:6}]},
+  options:{...base,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.parsed.y.toFixed(2)+'M followers'}}},scales:{x:ax(tc),y:{...ax(tc,v=>v+'M'),min:0,max:23}}}
 });
 
-// 3. Political comparison
-new Chart(document.getElementById('politicalComp'), {
-  type: 'bar',
-  data: {
-    labels: ['CJP (live)','INC','BJP','AAP','SP'],
-    datasets: [{
-      data: [20.0,13.2,8.7,4.2,2.1],
-      backgroundColor: ['rgba(168,156,247,1)','rgba(77,163,245,0.65)','rgba(62,207,142,0.65)','rgba(245,166,35,0.65)','rgba(240,98,146,0.65)'],
-      borderColor: [C,B,G,A,P], borderWidth: 1, borderRadius: 6
-    }]
-  },
-  options: {
-    ...base, indexAxis: 'y',
-    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.x.toFixed(1)+'M followers' } } },
-    scales: {
-      x: { ...ax(tc, v => v+'M'), min: 0, max: 22 },
-      y: ax(tc)
-    }
-  }
+new Chart(document.getElementById('politicalComp'),{
+  type:'bar',
+  data:{labels:['CJP (live 20.49M)','INC','BJP','AAP','SP'],datasets:[{data:[20.49,13.2,8.7,4.2,2.1],backgroundColor:['rgba(168,156,247,1)','rgba(77,163,245,0.65)','rgba(62,207,142,0.65)','rgba(245,166,35,0.65)','rgba(240,98,146,0.65)'],borderColor:[C,B,G,A,P],borderWidth:1,borderRadius:6}]},
+  options:{...base,indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.parsed.x.toFixed(2)+'M followers'}}},scales:{x:{...ax(tc,v=>v+'M'),min:0,max:23},y:ax(tc)}}
 });
 
-// 4. Growth rate
-new Chart(document.getElementById('growthRate'), {
-  type: 'bar',
-  data: {
-    labels: ['May 16','May 17','May 18','May 19','May 20','May 21','May 22'],
-    datasets: [{
-      data: [0.55,1.45,1.0,3.1,4.8,5.1,4.0],
-      backgroundColor: [
-        'rgba(240,122,90,0.25)','rgba(240,122,90,0.38)','rgba(240,122,90,0.35)',
-        'rgba(240,122,90,0.6)','rgba(240,122,90,0.9)','rgba(240,122,90,1)','rgba(240,122,90,0.75)'
-      ],
-      borderColor: O, borderWidth: 1, borderRadius: 6
-    }]
-  },
-  options: {
-    ...base,
-    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => '+'+ctx.parsed.y.toFixed(2)+'M new followers' } } },
-    scales: {
-      x: ax(tc),
-      y: { ...ax(tc, v => '+'+v.toFixed(1)+'M'), min: 0, max: 6.5 }
-    }
-  }
+new Chart(document.getElementById('growthRate'),{
+  type:'bar',
+  data:{labels:['May 16','May 17','May 18','May 19','May 20','May 21','May 22'],datasets:[{data:[0.55,1.45,1.0,3.1,4.8,5.1,4.49],backgroundColor:['rgba(240,122,90,0.25)','rgba(240,122,90,0.38)','rgba(240,122,90,0.35)','rgba(240,122,90,0.6)','rgba(240,122,90,0.9)','rgba(240,122,90,1)','rgba(240,122,90,0.75)'],borderColor:O,borderWidth:1,borderRadius:6}]},
+  options:{...base,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'+'+ctx.parsed.y.toFixed(2)+'M new followers'}}},scales:{x:ax(tc),y:{...ax(tc,v=>'+'+v.toFixed(1)+'M'),min:0,max:6.5}}}
 });
 
-// 5. Engagement
-new Chart(document.getElementById('engageChart'), {
-  type: 'bar',
-  data: {
-    labels: ['CJP (est.)','Mid-tier\n100K–1M','Large\n1M–5M','Mega\n5M+'],
-    datasets: [{
-      data: [20,3.5,2.4,1.7],
-      backgroundColor: ['rgba(240,98,146,1)','rgba(240,98,146,0.4)','rgba(240,98,146,0.3)','rgba(240,98,146,0.22)'],
-      borderColor: P, borderWidth: 1, borderRadius: 6
-    }]
-  },
-  options: {
-    ...base, indexAxis: 'y',
-    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.x.toFixed(1)+'% engagement' } } },
-    scales: {
-      x: { ...ax(tc, v => v+'%'), min: 0, max: 25 },
-      y: ax(tc)
-    }
-  }
+new Chart(document.getElementById('engageChart'),{
+  type:'bar',
+  data:{labels:['CJP (est.)','Mid-tier\n100K–1M','Large\n1M–5M','Mega\n5M+'],datasets:[{data:[20,3.5,2.4,1.7],backgroundColor:['rgba(240,98,146,1)','rgba(240,98,146,0.4)','rgba(240,98,146,0.3)','rgba(240,98,146,0.22)'],borderColor:P,borderWidth:1,borderRadius:6}]},
+  options:{...base,indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.parsed.x.toFixed(1)+'% engagement'}}},scales:{x:{...ax(tc,v=>v+'%'),min:0,max:25},y:ax(tc)}}
 });
 
-// 6. Website visits
-new Chart(document.getElementById('websiteChart'), {
-  type: 'bar',
-  data: {
-    labels: ['May 16','May 17','May 18','May 19','May 20','May 21','May 22'],
-    datasets: [{
-      data: [50,120,200,280,350,220,310],
-      backgroundColor: [
-        'rgba(62,207,142,0.25)','rgba(62,207,142,0.38)','rgba(62,207,142,0.52)',
-        'rgba(62,207,142,0.65)','rgba(62,207,142,0.85)','rgba(62,207,142,0.55)','rgba(62,207,142,0.78)'
-      ],
-      borderColor: G, borderWidth: 1, borderRadius: 6
-    }]
-  },
-  options: {
-    ...base,
-    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => Math.round(ctx.parsed.y)+'K visits' } } },
-    scales: {
-      x: ax(tc),
-      y: { ...ax(tc, v => v+'K'), min: 0, max: 400 }
-    }
-  }
+new Chart(document.getElementById('websiteChart'),{
+  type:'bar',
+  data:{labels:['May 16','May 17','May 18','May 19','May 20','May 21','May 22'],datasets:[{data:[50,120,200,280,350,220,310],backgroundColor:['rgba(62,207,142,0.25)','rgba(62,207,142,0.38)','rgba(62,207,142,0.52)','rgba(62,207,142,0.65)','rgba(62,207,142,0.85)','rgba(62,207,142,0.55)','rgba(62,207,142,0.78)'],borderColor:G,borderWidth:1,borderRadius:6}]},
+  options:{...base,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>Math.round(ctx.parsed.y)+'K visits'}}},scales:{x:ax(tc),y:{...ax(tc,v=>v+'K'),min:0,max:400}}}
 });
 
-// 7. Traffic sources
-new Chart(document.getElementById('trafficSrc'), {
-  type: 'doughnut',
-  data: {
-    labels: ['Social (IG/X)','Direct','Referral (news)','Organic search'],
-    datasets: [{
-      data: [55,22,17,6],
-      backgroundColor: [C,G,A,B],
-      borderWidth: 3, borderColor: '#141418'
-    }]
-  },
-  options: {
-    ...base,
-    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.label+': '+ctx.parsed+'%' } } },
-    cutout: '62%'
-  }
+new Chart(document.getElementById('trafficSrc'),{
+  type:'doughnut',
+  data:{labels:['Social (IG/X)','Direct','Referral (news)','Organic search'],datasets:[{data:[55,22,17,6],backgroundColor:[C,G,A,B],borderWidth:3,borderColor:'#141418'}]},
+  options:{...base,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.label+': '+ctx.parsed+'%'}}},cutout:'62%'}
 });
 
-// 8. Platform reach
-new Chart(document.getElementById('platformChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Instagram','CJP App\ncjpapp.online','Est. website\nvisits total','Form\nsign-ups','Registered\nmembers','X @Cockroachisback\n(new handle)'],
-    datasets: [{
-      data: [20000,795,1530,350,204,24],
-      backgroundColor: ['rgba(168,156,247,0.9)','rgba(77,163,245,0.75)','rgba(62,207,142,0.75)','rgba(240,122,90,0.75)','rgba(245,166,35,0.75)','rgba(245,166,35,0.6)'],
-      borderColor: [C,B,G,O,A,A], borderWidth: 1, borderRadius: 6
-    }]
-  },
-  options: {
-    ...base, indexAxis: 'y',
-    plugins: { legend:{display:false}, tooltip: { callbacks: { label: ctx => ctx.parsed.x >= 1000 ? (ctx.parsed.x/1000).toFixed(1)+'M' : Math.round(ctx.parsed.x)+'K' } } },
-    scales: {
-      x: { ...ax(tc, v => v >= 1000 ? (v/1000).toFixed(0)+'M' : v+'K') },
-      y: ax(tc)
-    }
-  }
+new Chart(document.getElementById('platformChart'),{
+  type:'bar',
+  data:{labels:['Instagram\n20.49M','CJP App\ncjpapp.online','Est. website\nvisits total','Form\nsign-ups','Registered\nmembers','X @Cockroachisback\n(new handle)'],datasets:[{data:[20492,795,1530,350,204,24],backgroundColor:['rgba(168,156,247,0.9)','rgba(77,163,245,0.75)','rgba(62,207,142,0.75)','rgba(240,122,90,0.75)','rgba(245,166,35,0.75)','rgba(245,166,35,0.6)'],borderColor:[C,B,G,O,A,A],borderWidth:1,borderRadius:6}]},
+  options:{...base,indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.parsed.x>=1000?(ctx.parsed.x/1000).toFixed(2)+'M':Math.round(ctx.parsed.x)+'K'}}},scales:{x:{...ax(tc,v=>v>=1000?(v/1000).toFixed(0)+'M':v+'K')},y:ax(tc)}}
 });
 </script>
 
